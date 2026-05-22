@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FBF9F6" />
+  <title>Cotswold Capital — A boutique investment bank</title>
+  <meta name="description" content="A network of senior advisors raising capital and advising corporates under one institutional banner. London, New York, Dubai." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/site.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo/cotswold-mark.svg" />
+
+  <!-- Preload the hero image so it paints almost instantly -->
+  <link
+    rel="preload"
+    as="image"
+    href="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=78&auto=format&fit=crop"
+    fetchpriority="high"
+  />
+
+  <script>
+    // Progressive enhancement: hides reveal-things only when JS is alive
+    document.documentElement.classList.add('js');
+
+    // Safety net: if anything fails, force reveal everything after 2.5s
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .reveal-stagger, .clip-reveal, .curtain, .section--dark').forEach((el) => {
+        if (!el.classList.contains('is-in')) el.classList.add('is-in');
+      });
+    }, 2500);
+
+    // Image failure fallback: if any image 404s, render a refined gradient
+    document.addEventListener('error', (e) => {
+      const t = e.target;
+      if (t && t.tagName === 'IMG') {
+        t.style.opacity = '0';
+        const parent = t.parentElement;
+        if (parent) {
+          parent.style.background = 'linear-gradient(135deg, oklch(0.94 0.010 50), oklch(0.88 0.014 45))';
+        }
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress__bar"></span>
+  </div>
+
+  <header class="nav" data-scrolled="false">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="./index.html" aria-label="Cotswold Capital home">
+        <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" />
+        <span class="wordmark">Cotswold Capital</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" aria-current="page" href="./index.html">Firm</a></li>
+          <li><a class="nav__link" href="./opportunities.html">Opportunities</a></li>
+          <li><a class="nav__link" href="./about.html">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cta" href="#contact">Begin a conversation</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ Hero IV — half-bleed split ============ -->
+    <section class="hero-iv" data-hero>
+      <div class="hero-iv__copy">
+        <span class="hero-iv__status">
+          <span class="pulse" aria-hidden="true"></span>
+          Live · Over $5B in mandates
+        </span>
+
+        <h1 class="hero-iv__headline">
+          <span class="word"><span class="word-inner">Capital,</span></span>
+          <span class="word"><span class="word-inner">raised</span></span>
+          <span class="word"><span class="word-inner">in</span></span>
+          <span class="word"><span class="word-inner">private.</span></span>
+        </h1>
+
+        <p class="hero-iv__lede">
+          Cotswold Capital is a boutique investment bank advising founders, corporates, and family offices on M&amp;A, capital raising, and bespoke opportunities. A network of senior advisors operating under one institutional banner.
+        </p>
+
+        <div class="hero-iv__row">
+          <a class="btn" href="#contact">
+            Begin a conversation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="./opportunities.html">
+            View opportunities
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-iv__media" data-hero-photo>
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=78&auto=format&fit=crop"
+          alt="A refined boardroom interior at golden hour."
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          width="1600" height="1067"
+        />
+        <div class="hero-iv__caption">
+          <span>London · Mayfair</span>
+          <span>Partner-led, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Stats strip ============ -->
+    <section class="stats-strip">
+      <div class="container container--wide">
+        <div class="stats-strip__inner reveal-stagger">
+          <div class="stat-cell">
+            <span class="stat-cell__figure"><span data-count="5" data-prefix="$" data-suffix="B+" data-decimals="0">$5B+</span></span>
+            <span class="stat-cell__label">Live mandates in motion</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__figure"><span data-count="3" data-decimals="0">3</span></span>
+            <span class="stat-cell__label">Cities · One firm</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__figure"><span data-count="20" data-suffix="+ yrs" data-decimals="0">20+ yrs</span></span>
+            <span class="stat-cell__label">Avg. advisor experience</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell__figure"><span data-count="100" data-suffix="%" data-decimals="0">100%</span></span>
+            <span class="stat-cell__label">Partner-led engagements</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Sub-hero city image strip ============ -->
+    <section class="section section--tight">
+      <div class="container container--wide">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">Coverage</p>
+          <h2 class="s-head__title">Three cities. One firm.</h2>
+        </header>
+
+        <div class="city-strip reveal-stagger">
+          <a class="city-tile" href="./about.html" data-cursor-state="view">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=75&auto=format&fit=crop"
+                 alt="A view of the City of London at golden hour."
+                 loading="lazy" decoding="async" width="1200" height="1500" />
+            <div class="city-tile__label">
+              <span class="city-tile__name">London</span>
+              <span class="city-tile__meta">Headquarters</span>
+            </div>
+          </a>
+          <a class="city-tile" href="./about.html" data-cursor-state="view">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=900&q=75&auto=format&fit=crop"
+                 alt="A view of New York architecture."
+                 loading="lazy" decoding="async" width="1200" height="1500" />
+            <div class="city-tile__label">
+              <span class="city-tile__name">New York</span>
+              <span class="city-tile__meta">North America</span>
+            </div>
+          </a>
+          <a class="city-tile" href="./about.html" data-cursor-state="view">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1546412414-e1885259563a?w=900&q=75&auto=format&fit=crop"
+                 alt="A building in Dubai's financial district."
+                 loading="lazy" decoding="async" width="1200" height="1500" />
+            <div class="city-tile__label">
+              <span class="city-tile__name">Dubai</span>
+              <span class="city-tile__meta">Gulf &amp; South Asia</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Sectors we cover ============ -->
+    <section class="section section--tight" data-meta>
+      <span class="section-meta" aria-hidden="true">01 — Sectors</span>
+      <div class="container">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">Sectors we cover</p>
+          <h2 class="s-head__title">Selective by design.</h2>
+          <p class="s-head__sub">Six sectors where we hold genuine pattern-recognition. We decline more mandates than we take.</p>
+        </header>
+
+        <div class="sectors reveal-stagger">
+          <a class="sector" href="#contact">
+            <span class="sector__num">01</span>
+            <div class="sector__body">
+              <span class="sector__name">Industrials</span>
+              <span class="sector__desc">Specialty manufacturing, distribution, and infrastructure.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+          <a class="sector" href="#contact">
+            <span class="sector__num">02</span>
+            <div class="sector__body">
+              <span class="sector__name">Energy transition</span>
+              <span class="sector__desc">Renewable generation, storage, and circular economies.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+          <a class="sector" href="#contact">
+            <span class="sector__num">03</span>
+            <div class="sector__body">
+              <span class="sector__name">Healthcare services</span>
+              <span class="sector__desc">Service-led platforms and regulated consumables.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+          <a class="sector" href="#contact">
+            <span class="sector__num">04</span>
+            <div class="sector__body">
+              <span class="sector__name">Real assets</span>
+              <span class="sector__desc">Heritage real estate, infrastructure, and natural resources.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+          <a class="sector" href="#contact">
+            <span class="sector__num">05</span>
+            <div class="sector__body">
+              <span class="sector__name">Regulated services</span>
+              <span class="sector__desc">Counter-cyclical operators with high barriers to entry.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+          <a class="sector" href="#contact">
+            <span class="sector__num">06</span>
+            <div class="sector__body">
+              <span class="sector__name">Financial services</span>
+              <span class="sector__desc">Specialty credit, advisory, and asset management platforms.</span>
+            </div>
+            <span class="sector__arrow" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services with persistent image ============ -->
+    <section class="section" data-meta>
+      <span class="section-meta" aria-hidden="true">02 — Practices</span>
+      <div class="container">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">What we do</p>
+          <h2 class="s-head__title">Four practices, one standard of care.</h2>
+          <p class="s-head__sub">Every engagement is led by a partner. No leverage, no juniors-running-the-meeting, no surprises on the invoice.</p>
+        </header>
+
+        <div class="services-iv reveal">
+          <div class="services-iv__list" role="tablist">
+            <a class="services-iv__item" href="#contact" data-frame="0" aria-selected="true">
+              <span class="services-iv__num">01</span>
+              <div class="services-iv__body">
+                <span class="services-iv__name">Mergers &amp; acquisitions</span>
+                <span class="services-iv__desc">Buy-side and sell-side mandates, from origination to close. Discretion enforced as a deliverable, not a courtesy.</span>
+              </div>
+              <span class="services-iv__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </span>
+            </a>
+
+            <a class="services-iv__item" href="#contact" data-frame="1">
+              <span class="services-iv__num">02</span>
+              <div class="services-iv__body">
+                <span class="services-iv__name">Capital raising</span>
+                <span class="services-iv__desc">Equity, structured credit and project finance for sponsors seeking conviction capital rather than syndicate filler.</span>
+              </div>
+              <span class="services-iv__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </span>
+            </a>
+
+            <a class="services-iv__item" href="#contact" data-frame="2">
+              <span class="services-iv__num">03</span>
+              <div class="services-iv__body">
+                <span class="services-iv__name">Corporate advisory</span>
+                <span class="services-iv__desc">Board-level counsel for shareholder transitions, valuations, and capital structure decisions held over multiple cycles.</span>
+              </div>
+              <span class="services-iv__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </span>
+            </a>
+
+            <a class="services-iv__item" href="./opportunities.html" data-frame="3">
+              <span class="services-iv__num">04</span>
+              <div class="services-iv__body">
+                <span class="services-iv__name">Opportunities introduction</span>
+                <span class="services-iv__desc">A curated stream of live mandates introduced to qualified investors. Bilateral, never broadcast.</span>
+              </div>
+              <span class="services-iv__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="services-iv__viewport" aria-hidden="true">
+            <div class="services-iv__frame is-active">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=75&auto=format&fit=crop"
+                   alt="" />
+              <span class="services-iv__frame-label">Mergers &amp; acquisitions</span>
+            </div>
+            <div class="services-iv__frame">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=75&auto=format&fit=crop"
+                   alt="" />
+              <span class="services-iv__frame-label">Capital raising</span>
+            </div>
+            <div class="services-iv__frame">
+              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=75&auto=format&fit=crop"
+                   alt="" />
+              <span class="services-iv__frame-label">Corporate advisory</span>
+            </div>
+            <div class="services-iv__frame">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=75&auto=format&fit=crop"
+                   alt="" />
+              <span class="services-iv__frame-label">Opportunities introduction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Process — four phases ============ -->
+    <section class="section section--surface-2" data-meta>
+      <span class="section-meta" aria-hidden="true">03 — Process</span>
+      <div class="container">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">How we work</p>
+          <h2 class="s-head__title">Four phases. Held to standard.</h2>
+          <p class="s-head__sub">Every engagement follows the same disciplined arc — written, agreed, and revisited at each gate.</p>
+        </header>
+
+        <div class="process reveal-stagger">
+          <div class="phase">
+            <span class="phase__num">01</span>
+            <span class="phase__name">Engage</span>
+            <span class="phase__desc">Confidential introduction. Mandate scope agreed in writing before any market action.</span>
+          </div>
+          <div class="phase">
+            <span class="phase__num">02</span>
+            <span class="phase__name">Underwrite</span>
+            <span class="phase__desc">Diligence, structuring, and counterparty mapping. Partner-led, no junior bench.</span>
+          </div>
+          <div class="phase">
+            <span class="phase__num">03</span>
+            <span class="phase__name">Execute</span>
+            <span class="phase__desc">Bilateral outreach, terms, and negotiation under a defined process.</span>
+          </div>
+          <div class="phase">
+            <span class="phase__num">04</span>
+            <span class="phase__name">Close</span>
+            <span class="phase__desc">Documentation, post-close coordination, ongoing counsel across the cycle.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Pull-quote breathing moment ============ -->
+    <section class="pull-quote">
+      <div class="container">
+        <p class="pull-quote__text reveal">
+          "Discretion is held as a deliverable, not a courtesy."
+        </p>
+        <p class="pull-quote__attr reveal">— Cotswold Capital, operating principle 02</p>
+      </div>
+    </section>
+
+    <!-- ============ Opportunities (DARK cinematic) ============ -->
+    <section class="section section--dark section--ample" data-meta>
+      <span class="section-meta" aria-hidden="true" style="color: var(--on-dark-3);">— Mandates</span>
+      <div class="container">
+
+        <header class="s-head s-head--split reveal" style="margin-bottom: var(--s-7);">
+          <div>
+            <p class="s-head__eyebrow">Live opportunities · MMXXVI</p>
+            <h2 class="s-head__title">Two of the mandates currently in motion.</h2>
+          </div>
+          <a class="btn btn--ghost" href="./opportunities.html" style="color: var(--on-dark); border-color: var(--rule-dark);">
+            View all opportunities
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+          </a>
+        </header>
+
+        <article class="cine-feature reveal" data-cursor-state="view">
+          <div class="cine-feature__media">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1300&q=78&auto=format&fit=crop"
+                 alt="An industrial-scale processing facility."
+                 loading="lazy" decoding="async" width="1600" height="1200" />
+          </div>
+          <div class="cine-feature__body">
+            <div class="cine-feature__meta">
+              <span>CC-2026-04</span>
+              <span>·</span>
+              <span>Energy transition</span>
+              <span class="status">Open</span>
+            </div>
+            <h3 class="cine-feature__title">Anaerobic waste-to-energy plant</h3>
+            <p class="cine-feature__desc">A scaled processing facility converting municipal organic waste into renewable energy and stabilised feedstocks. Equity and structured credit being placed under bilateral terms.</p>
+            <div class="cine-feature__scale">
+              <span class="cine-feature__figure" data-count="4" data-prefix="$" data-suffix="B" data-decimals="0">$4B</span>
+              <span class="cine-feature__figure-unit">total project value <br/>across two phases</span>
+            </div>
+            <a class="cine-feature__cta" href="#contact">
+              Request the memorandum
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="cine-feature cine-feature--reverse reveal" data-cursor-state="view">
+          <div class="cine-feature__media">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1300&q=78&auto=format&fit=crop"
+                 alt="A boardroom interior."
+                 loading="lazy" decoding="async" width="1600" height="1200" />
+          </div>
+          <div class="cine-feature__body">
+            <div class="cine-feature__meta">
+              <span>CC-2026-03</span>
+              <span>·</span>
+              <span>Regulated services</span>
+              <span class="status">Closing</span>
+            </div>
+            <h3 class="cine-feature__title">Cremation industry consolidation</h3>
+            <p class="cine-feature__desc">A roll-up of regional operators in a counter-cyclical, regulated services sector with high barriers to entry. Senior debt and minority equity tranches being arranged for a multi-asset platform.</p>
+            <div class="cine-feature__scale">
+              <span class="cine-feature__figure" data-count="1" data-prefix="$" data-suffix="B" data-decimals="0">$1B</span>
+              <span class="cine-feature__figure-unit">platform target <br/>over 36 months</span>
+            </div>
+            <a class="cine-feature__cta" href="#contact">
+              Request the memorandum
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Selected transactions ============ -->
+    <section class="section" data-meta>
+      <span class="section-meta" aria-hidden="true">04 — Track record</span>
+      <div class="container">
+        <header class="s-head s-head--split reveal" style="margin-bottom: var(--s-7);">
+          <div>
+            <p class="s-head__eyebrow">Selected transactions</p>
+            <h2 class="s-head__title">A representative sample.</h2>
+          </div>
+          <p class="s-head__sub" style="margin: 0;">Counterparties never named publicly. Details available under NDA.</p>
+        </header>
+
+        <div class="transactions reveal-stagger">
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXVI</span>
+            <span class="transaction__type">Project finance</span>
+            <span class="transaction__sector">Energy transition</span>
+            <span class="transaction__region">EMEA</span>
+            <span class="transaction__scale">$4B</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXVI</span>
+            <span class="transaction__type">Buy &amp; build, senior debt</span>
+            <span class="transaction__sector">Regulated services</span>
+            <span class="transaction__region">United Kingdom</span>
+            <span class="transaction__scale">$1B</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXVI</span>
+            <span class="transaction__type">Sell-side mandate</span>
+            <span class="transaction__sector">Industrials</span>
+            <span class="transaction__region">Continental Europe</span>
+            <span class="transaction__scale">$320M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXV</span>
+            <span class="transaction__type">Capital raise, growth equity</span>
+            <span class="transaction__sector">Healthcare services</span>
+            <span class="transaction__region">United States</span>
+            <span class="transaction__scale">$180M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXV</span>
+            <span class="transaction__type">Strategic advisory</span>
+            <span class="transaction__sector">Financial services</span>
+            <span class="transaction__region">GCC</span>
+            <span class="transaction__scale">$240M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXIV</span>
+            <span class="transaction__type">Sell-side, dual-track</span>
+            <span class="transaction__sector">Energy transition</span>
+            <span class="transaction__region">United Kingdom</span>
+            <span class="transaction__scale">$510M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXIV</span>
+            <span class="transaction__type">Capital partner</span>
+            <span class="transaction__sector">Real assets</span>
+            <span class="transaction__region">United Kingdom</span>
+            <span class="transaction__scale">$180M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="transaction" href="#contact">
+            <span class="transaction__year">MMXXIV</span>
+            <span class="transaction__type">Operational restructuring</span>
+            <span class="transaction__sector">Industrials</span>
+            <span class="transaction__region">Continental Europe</span>
+            <span class="transaction__scale">$90M</span>
+            <span class="transaction__arrow" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Network preview (light again) ============ -->
+    <section class="section section--surface-2 curtain" data-meta>
+      <span class="section-meta" aria-hidden="true">05 — Firm</span>
+      <div class="container">
+        <div class="network">
+          <div class="network__copy reveal">
+            <p class="eyebrow">The shape of the firm</p>
+            <h2 class="s-head__title">A network, not a nameplate.</h2>
+            <p style="color:var(--ink-2); font-size:1.0625rem; line-height:1.55; max-width:48ch;">
+              Cotswold Capital is a federation of senior independent practitioners — each with two decades or more of execution experience — operating under a unified institutional name. We do not list every advisor publicly. We list every transaction we have led.
+            </p>
+            <a class="btn btn--ghost" href="./about.html" style="margin-top: var(--s-3); width: max-content;">
+              About the firm
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </a>
+          </div>
+          <div class="network__media reveal">
+            <img class="clip-reveal"
+                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1100&q=78&auto=format&fit=crop"
+                 alt="A refined boardroom interior."
+                 loading="lazy" decoding="async" width="1400" height="1680" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Insights ============ -->
+    <section class="section" data-meta>
+      <span class="section-meta" aria-hidden="true">06 — Insights</span>
+      <div class="container">
+        <header class="s-head s-head--split reveal" style="margin-bottom: var(--s-7);">
+          <div>
+            <p class="s-head__eyebrow">Insights</p>
+            <h2 class="s-head__title">Recent thinking from the firm.</h2>
+          </div>
+          <a class="btn btn--ghost" href="#" style="opacity: 0.7;">
+            All notes
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+          </a>
+        </header>
+
+        <div class="insights reveal-stagger">
+
+          <a class="insight" href="#" data-cursor-state="view">
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=75&auto=format&fit=crop"
+                   alt="Market analytics on a desk." loading="lazy" decoding="async" width="900" height="675" />
+            </div>
+            <div class="insight__meta">
+              <span class="insight__category">Essay</span>
+              <span>·</span>
+              <span>6 min</span>
+              <span>·</span>
+              <span>MMXXVI</span>
+            </div>
+            <h3 class="insight__title">Why family offices are bypassing the bulge bracket.</h3>
+            <p class="insight__excerpt">The advisory market has bifurcated. The middle is where conviction goes to die.</p>
+            <span class="insight__cta">
+              Read the essay
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="insight" href="#" data-cursor-state="view">
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=900&q=75&auto=format&fit=crop"
+                   alt="Industrial scale infrastructure." loading="lazy" decoding="async" width="900" height="675" />
+            </div>
+            <div class="insight__meta">
+              <span class="insight__category">Brief</span>
+              <span>·</span>
+              <span>9 min</span>
+              <span>·</span>
+              <span>MMXXVI</span>
+            </div>
+            <h3 class="insight__title">Energy transition: when scale stops being scary.</h3>
+            <p class="insight__excerpt">Off-take contracting is the variable that turned waste-to-energy from a thesis into a category.</p>
+            <span class="insight__cta">
+              Read the brief
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+          <a class="insight" href="#" data-cursor-state="view">
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=75&auto=format&fit=crop"
+                   alt="A refined boardroom interior." loading="lazy" decoding="async" width="900" height="675" />
+            </div>
+            <div class="insight__meta">
+              <span class="insight__category">Note</span>
+              <span>·</span>
+              <span>4 min</span>
+              <span>·</span>
+              <span>MMXXVI</span>
+            </div>
+            <h3 class="insight__title">The architecture of a senior-led mandate.</h3>
+            <p class="insight__excerpt">What partner-led actually means, in writing. The mechanics matter more than the slogan.</p>
+            <span class="insight__cta">
+              Read the note
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact" data-meta>
+      <span class="section-meta" aria-hidden="true">07 — Contact</span>
+      <div class="container">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">Begin a conversation</p>
+          <h2 class="s-head__title">Two reasons to write. Either is welcome.</h2>
+        </header>
+
+        <div class="contact">
+          <div class="contact__intents reveal-stagger">
+            <label class="intent">
+              <input type="radio" name="intent" value="advisory" checked />
+              <span>
+                <span class="intent__title">I am seeking advisory</span>
+                <span class="intent__desc">M&amp;A, capital raising, or corporate finance counsel. Founder, board, or shareholder side.</span>
+              </span>
+            </label>
+            <label class="intent">
+              <input type="radio" name="intent" value="investor" />
+              <span>
+                <span class="intent__title">I am an investor</span>
+                <span class="intent__desc">Family office, institutional, or qualified individual. Request a current opportunity brief.</span>
+              </span>
+            </label>
+          </div>
+
+          <form class="form reveal" onsubmit="event.preventDefault(); alert('This is a design concept. Form is not wired.');">
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="org">Organisation</label>
+                <input id="org" name="org" type="text" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="jurisdiction">Jurisdiction</label>
+                <select id="jurisdiction" name="jurisdiction">
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>United Arab Emirates</option>
+                  <option>Switzerland</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">A few lines on what brings you here</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div>
+              <button class="btn" type="submit">
+                Send privately
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" />
+          <div class="footer__brand-name">Cotswold Capital</div>
+          <p class="footer__tag">A boutique investment bank. Corporate finance, M&amp;A, and bespoke capital — under one institutional banner.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Firm</h4>
+          <ul role="list">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./index.html">Services</a></li>
+            <li><a href="./opportunities.html">Opportunities</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Offices</h4>
+          <ul role="list">
+            <li>Mayfair · London</li>
+            <li>Midtown · New York</li>
+            <li>DIFC · Dubai</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Regulation</h4>
+          <ul role="list">
+            <li>FCA registration</li>
+            <li>Privacy &amp; legal</li>
+            <li>Modern slavery statement</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© Cotswold Capital · MMXXVI</span>
+        <span>Discretion as a deliverable</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/animations.js" defer></script>
+  <script src="./scripts/interactions.js" defer></script>
+
+</body>
+</html>

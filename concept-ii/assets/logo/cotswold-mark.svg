@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cotswold Capital monogram">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#28406B"/>
+      <stop offset="1" stop-color="#0F1E3A"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#navy)" stroke-width="2.6" stroke-linecap="square">
+    <path d="M51 19.2 A22 22 0 1 0 51 44.8"/>
+  </g>
+  <line x1="48.5" y1="16.5" x2="55" y2="16.5" stroke="url(#navy)" stroke-width="1.2"/>
+  <line x1="48.5" y1="47.5" x2="55" y2="47.5" stroke="url(#navy)" stroke-width="1.2"/>
+</svg>

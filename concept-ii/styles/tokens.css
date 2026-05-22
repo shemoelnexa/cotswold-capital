@@ -1,0 +1,85 @@
+/* ============================================================
+   Cotswold Capital — Concept V (Hark-inspired)
+   Design tokens: off-white surface, navy + blue palette.
+   ============================================================ */
+
+:root {
+  /* ---- Surfaces ---- */
+  --surface:        oklch(0.97 0.004 80);
+  --surface-2:      oklch(0.94 0.006 240);
+  --surface-3:      oklch(0.90 0.008 240);
+  --ink:            oklch(0.18 0.012 250);
+  --ink-2:          oklch(0.42 0.020 245);
+  --ink-3:          oklch(0.62 0.018 240);
+  --ink-inv:        oklch(0.97 0.004 80);
+
+  --rule:           oklch(0.90 0.010 240);
+  --rule-strong:    oklch(0.78 0.014 240);
+
+  /* ---- Brand (navy + blue, no rose gold this time) ---- */
+  --navy:           oklch(0.28 0.065 250);
+  --navy-deep:      oklch(0.22 0.060 252);
+  --blue:           oklch(0.42 0.110 245);
+  --blue-bright:    oklch(0.55 0.135 240);
+  --blue-wash:      oklch(0.94 0.025 245);
+
+  /* ---- Dark surface for accent sections ---- */
+  --ink-dark:       oklch(0.16 0.022 250);
+  --ink-dark-2:     oklch(0.22 0.024 248);
+  --on-dark:        oklch(0.96 0.005 80);
+  --on-dark-2:      oklch(0.74 0.018 245);
+  --on-dark-3:      oklch(0.52 0.020 245);
+  --rule-dark:      oklch(0.32 0.024 245);
+
+  /* ---- Type ---- */
+  --font-display:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-body:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+  --t-display:      clamp(3rem, 6vw, 5.5rem);
+  --t-h1:           clamp(2.25rem, 3.4vw, 3.5rem);
+  --t-h2:           clamp(1.5rem, 1.6vw, 2rem);
+  --t-h3:           1.25rem;
+  --t-body:         1.0625rem;
+  --t-small:        0.9375rem;
+  --t-meta:         0.78125rem;
+
+  --lh-tight:       1.04;
+  --lh-snug:        1.18;
+  --lh-normal:      1.55;
+
+  --ls-display:     -0.026em;
+  --ls-tight:       -0.012em;
+  --ls-normal:      0;
+  --ls-eyebrow:     0.16em;
+
+  /* ---- Space ---- */
+  --s-1:  4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 24px;  --s-6: 32px; --s-7: 48px; --s-8: 64px;
+  --s-9: 96px;  --s-10:128px; --s-11:192px; --s-12:256px;
+
+  /* ---- Layout ---- */
+  --max-w:          1360px;
+  --gutter:         clamp(20px, 4vw, 56px);
+  --grid-gap:       clamp(16px, 2vw, 32px);
+
+  /* ---- Motion ---- */
+  --ease-out:       cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft:      cubic-bezier(0.4, 0, 0.2, 1);
+  --d-quick:        180ms;
+  --d-base:         240ms;
+  --d-soft:         320ms;
+
+  /* ---- Radii ---- */
+  --r-1:            2px;
+  --r-2:            8px;
+  --r-3:            16px;
+
+  /* ---- Shadows ---- */
+  --shadow-1:       0 1px 2px oklch(0.18 0.020 250 / 0.05),
+                    0 2px 10px oklch(0.18 0.020 250 / 0.05);
+  --shadow-2:       0 8px 30px oklch(0.18 0.022 250 / 0.10),
+                    0 2px 6px oklch(0.18 0.022 250 / 0.06);
+
+  --cursor-dot:     6px;
+  --cursor-ring:    34px;
+}

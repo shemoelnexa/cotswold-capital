@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cotswold Capital — Concept switcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      background: #F4F1EC;
+      color: #1A1A1F;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+    }
+    .wrap { width: 100%; max-width: 1100px; }
+    h1 {
+      font-weight: 600;
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      letter-spacing: -0.022em;
+      margin-bottom: 8px;
+      color: #1A1A1F;
+    }
+    .sub {
+      color: #5B554D;
+      font-size: 1.0625rem;
+      max-width: 56ch;
+      margin-bottom: 56px;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card {
+      display: grid;
+      gap: 16px;
+      padding: 40px;
+      border-radius: 12px;
+      background: #FBF9F6;
+      border: 1px solid #E8E3DC;
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 240ms cubic-bezier(0.22,1,0.36,1),
+                  transform 240ms cubic-bezier(0.22,1,0.36,1),
+                  box-shadow 240ms cubic-bezier(0.22,1,0.36,1);
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(26,22,18,0.08);
+      border-color: #1A1A1F;
+    }
+    .card--v {
+      background: #1A1F2C;
+      color: #F4F1EC;
+      border-color: #2A3147;
+    }
+    .card--v:hover { border-color: #4D7AAE; }
+    .num {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+    .card--iv .num { color: #8A4F44; }
+    .card--v .num  { color: #6F9DCF; }
+    .title {
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      font-weight: 600;
+      letter-spacing: -0.018em;
+      line-height: 1.12;
+    }
+    .desc {
+      font-size: 0.9375rem;
+      line-height: 1.55;
+      opacity: 0.78;
+      max-width: 42ch;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .tag {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.06);
+      font-weight: 500;
+    }
+    .card--v .tag { background: rgba(255,255,255,0.08); }
+    .open {
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .open svg { transition: transform 240ms cubic-bezier(0.22,1,0.36,1); }
+    .card:hover .open svg { transform: translateX(5px); }
+    .foot {
+      margin-top: 48px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #5B554D;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="num" style="color:#8A8378; margin-bottom: 12px;">Cotswold Capital · Design concepts</p>
+    <h1>Two directions to evaluate.</h1>
+    <p class="sub">Both concepts deliver the same brief content with different aesthetic vocabularies. Open each and tell us which you'd like to refine.</p>
+
+    <div class="grid">
+
+      <a class="card card--iv" href="./concept-i/index.html">
+        <span class="num">Concept I</span>
+        <h2 class="title">Cotswold, in motion.</h2>
+        <p class="desc">Half-bleed cinematic hero, sticky scroll storytelling, dark mandate section, twelve-section flow with rose-gold accents and refined photography.</p>
+        <div class="tags">
+          <span class="tag">Rose gold accent</span>
+          <span class="tag">Cinematic dark moments</span>
+          <span class="tag">12 sections</span>
+        </div>
+        <span class="open">
+          Open Concept I
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+        </span>
+      </a>
+
+      <a class="card card--v" href="./concept-ii/index.html">
+        <span class="num">Concept II</span>
+        <h2 class="title">Bespoke capital, in structure.</h2>
+        <p class="desc">Hark-inspired off-white surface, navy + blue palette, big numbered sections, 3D rotating cube hero, modular cards, and structured transaction grids.</p>
+        <div class="tags">
+          <span class="tag">Navy &amp; blue</span>
+          <span class="tag">3D rotating cube</span>
+          <span class="tag">Card-based layout</span>
+        </div>
+        <span class="open">
+          Open Concept II
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+        </span>
+      </a>
+
+    </div>
+
+    <p class="foot">Design concepts — Cotswold Capital · MMXXVI</p>
+  </div>
+</body>
+</html>

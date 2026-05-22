@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>About — Cotswold Capital</title>
+  <meta name="description" content="A network of senior independent advisors under one institutional banner. London, New York, Dubai." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/site.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo/cotswold-mark.svg" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => {
+        if (!el.classList.contains('is-in')) el.classList.add('is-in');
+      });
+    }, 2500);
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+  <header class="nav" data-scrolled="false">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="./index.html">
+        <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" />
+        <span class="wordmark">Cotswold Capital</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./index.html">Firm</a></li>
+          <li><a class="nav__link" href="./opportunities.html">Opportunities</a></li>
+          <li><a class="nav__link" aria-current="page" href="./about.html">About</a></li>
+          <li><a class="nav__link" href="./index.html#contact">Insights</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cta" href="./index.html#contact">Partner with us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section" style="padding-top: clamp(140px, 16vh, 200px);">
+      <div class="container">
+        <header class="reveal" style="max-width: 720px;">
+          <span class="section-tag">About the firm</span>
+          <h1 class="hero__headline" style="font-size: clamp(2.5rem, 5vw, 4.5rem); max-width: 18ch;">
+            A network of senior advisors, under <em>one banner.</em>
+          </h1>
+          <p class="hero__lede" style="margin-top: var(--s-5);">
+            Cotswold Capital is a federation of independent practitioners — each with two decades or more of execution experience — operating under a unified institutional name. We do not list every advisor by name. We list every transaction we have led.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section>
+      <div class="container container--wide">
+        <div class="stats reveal-stagger">
+          <div class="stat">
+            <span class="stat__num"><span data-count="2026" data-decimals="0">2026</span></span>
+            <span class="stat__label">Established</span>
+            <span class="stat__desc">United Kingdom, expanding to NY &amp; UAE.</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span data-count="20" data-suffix="+ yrs" data-decimals="0">20+ yrs</span></span>
+            <span class="stat__label">Avg. experience</span>
+            <span class="stat__desc">Each advisor, two decades of execution.</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span data-count="100" data-suffix="%" data-decimals="0">100%</span></span>
+            <span class="stat__label">Partner-led</span>
+            <span class="stat__desc">Every meeting, every mandate.</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num"><span data-count="3" data-decimals="0">3</span></span>
+            <span class="stat__label">Cities · One firm</span>
+            <span class="stat__desc">London · New York · Dubai.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="s-head reveal">
+          <span class="section-tag">01 · Operating principles</span>
+          <h2 class="s-head__title">Three principles. Held in writing.</h2>
+        </header>
+
+        <div class="solutions reveal-stagger" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <article class="solution">
+            <span class="solution__num">01</span>
+            <h3 class="solution__title">Senior</h3>
+            <p class="solution__desc">Every meeting is taken by a partner. There is no junior bench finishing your second draft.</p>
+          </article>
+          <article class="solution">
+            <span class="solution__num">02</span>
+            <h3 class="solution__title">Bilateral</h3>
+            <p class="solution__desc">Opportunities and counterparties are introduced one-to-one, never broadcast. Discretion is held as a deliverable.</p>
+          </article>
+          <article class="solution">
+            <span class="solution__num">03</span>
+            <h3 class="solution__title">Aligned</h3>
+            <p class="solution__desc">We earn through outcome-tied success fees and retained advisory. We do not take placement commissions that bias the introductions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface-2">
+      <div class="container container--wide">
+        <header class="s-head reveal">
+          <span class="section-tag">02 · Geography</span>
+          <h2 class="s-head__title">Three offices. One firm.</h2>
+        </header>
+
+        <div class="coverage reveal-stagger">
+          <a class="coverage-card" href="#" data-cursor-state="view">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=75&auto=format&fit=crop"
+                 alt="A view of London." loading="lazy" decoding="async" width="900" height="1125" />
+            <div class="coverage-card__body">
+              <span class="coverage-card__num">01 — Mayfair</span>
+              <span class="coverage-card__name">London</span>
+              <span class="coverage-card__desc">Headquarters and European mandates.</span>
+            </div>
+          </a>
+          <a class="coverage-card" href="#" data-cursor-state="view">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=900&q=75&auto=format&fit=crop"
+                 alt="A view of New York." loading="lazy" decoding="async" width="900" height="1125" />
+            <div class="coverage-card__body">
+              <span class="coverage-card__num">02 — Midtown</span>
+              <span class="coverage-card__name">New York</span>
+              <span class="coverage-card__desc">North American coverage and transatlantic capital.</span>
+            </div>
+          </a>
+          <a class="coverage-card" href="#" data-cursor-state="view">
+            <img src="https://images.unsplash.com/photo-1546412414-e1885259563a?w=900&q=75&auto=format&fit=crop"
+                 alt="A building in Dubai." loading="lazy" decoding="async" width="900" height="1125" />
+            <div class="coverage-card__body">
+              <span class="coverage-card__num">03 — DIFC</span>
+              <span class="coverage-card__name">Dubai</span>
+              <span class="coverage-card__desc">Gulf and South Asia coverage. Sovereign capital.</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" style="height: 26px; filter: invert(0.92);" />
+          <div class="footer__brand-name">Cotswold Capital</div>
+          <p class="footer__tag">A boutique investment bank. Corporate finance, M&amp;A, and bespoke capital — under one institutional banner.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Firm</h4>
+          <ul role="list">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./index.html#solutions">Solutions</a></li>
+            <li><a href="./opportunities.html">Opportunities</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Offices</h4>
+          <ul role="list"><li>Mayfair · London</li><li>Midtown · New York</li><li>DIFC · Dubai</li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Regulation</h4>
+          <ul role="list"><li>FCA registration</li><li>Privacy &amp; legal</li><li>Modern slavery statement</li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© Cotswold Capital · MMXXVI</span>
+        <span>Discretion as a deliverable</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/animations.js" defer></script>
+  <script src="./scripts/interactions.js" defer></script>
+
+</body>
+</html>

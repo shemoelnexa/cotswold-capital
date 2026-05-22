@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Opportunities — Cotswold Capital</title>
+  <meta name="description" content="Live mandates introduced bilaterally to qualified institutional and family-office investors." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/site.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo/cotswold-mark.svg" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .reveal-stagger').forEach((el) => {
+        if (!el.classList.contains('is-in')) el.classList.add('is-in');
+      });
+    }, 2500);
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+  <header class="nav" data-scrolled="false">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="./index.html">
+        <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" />
+        <span class="wordmark">Cotswold Capital</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./index.html">Firm</a></li>
+          <li><a class="nav__link" aria-current="page" href="./opportunities.html">Opportunities</a></li>
+          <li><a class="nav__link" href="./about.html">About</a></li>
+          <li><a class="nav__link" href="./index.html#contact">Insights</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cta" href="./index.html#contact">Partner with us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section" style="padding-top: clamp(140px, 16vh, 200px);">
+      <div class="container">
+        <header class="reveal" style="max-width: 720px;">
+          <span class="section-tag">Live opportunities · MMXXVI</span>
+          <h1 class="hero__headline" style="font-size: clamp(2.5rem, 5vw, 4.5rem); max-width: 17ch;">
+            Mandates, introduced <em>bilaterally.</em>
+          </h1>
+          <p class="hero__lede" style="margin-top: var(--s-5);">
+            A curated stream of corporate finance mandates and structured opportunities, presented under NDA to qualified institutions, family offices, and accredited principals. Nothing on this page is a public offer.
+          </p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section section--surface-2">
+      <div class="container">
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); padding-block: var(--s-5); border-bottom: 1px solid var(--rule); margin-bottom: var(--s-7);">
+          <span style="font-size: var(--t-meta); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin-right: var(--s-3);">Filter by sector</span>
+          <button class="chip" data-filter="all"          aria-pressed="true"  style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">All</button>
+          <button class="chip" data-filter="energy"       aria-pressed="false" style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">Energy</button>
+          <button class="chip" data-filter="services"     aria-pressed="false" style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">Regulated services</button>
+          <button class="chip" data-filter="real-assets"  aria-pressed="false" style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">Real assets</button>
+          <button class="chip" data-filter="healthcare"   aria-pressed="false" style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">Healthcare</button>
+          <button class="chip" data-filter="industrials"  aria-pressed="false" style="font-size: var(--t-small); padding: 6px 12px; border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-2); background: transparent; cursor: pointer;">Industrials</button>
+        </div>
+
+        <div class="transactions reveal-stagger">
+          <article class="tx" data-sectors="energy,real-assets">
+            <span class="tx__year">CC-2026-04 · MMXXVI</span>
+            <span class="tx__amount" data-count="4" data-prefix="$" data-suffix="B" data-decimals="0">$4B</span>
+            <h3 class="tx__title">Anaerobic waste-to-energy plant</h3>
+            <p class="tx__desc">Multi-jurisdiction project finance. Off-take contracted. Equity and structured credit being placed.</p>
+            <div class="tx__tags"><span class="tx__tag">Energy transition</span><span class="tx__tag">Project finance</span><span class="tx__tag">EMEA</span></div>
+          </article>
+          <article class="tx" data-sectors="services,healthcare">
+            <span class="tx__year">CC-2026-03 · MMXXVI</span>
+            <span class="tx__amount" data-count="1" data-prefix="$" data-suffix="B" data-decimals="0">$1B</span>
+            <h3 class="tx__title">Cremation industry consolidation</h3>
+            <p class="tx__desc">Counter-cyclical regulated services roll-up. Senior debt + minority equity tranches.</p>
+            <div class="tx__tags"><span class="tx__tag">Regulated services</span><span class="tx__tag">Buy &amp; build</span><span class="tx__tag">UK</span></div>
+          </article>
+          <article class="tx" data-sectors="industrials">
+            <span class="tx__year">CC-2026-02 · MMXXVI</span>
+            <span class="tx__amount" data-count="320" data-prefix="$" data-suffix="M" data-decimals="0">$320M</span>
+            <h3 class="tx__title">Specialty fabrications platform</h3>
+            <p class="tx__desc">Founder-owned, multi-site industrial. EBITDA-positive across cycles.</p>
+            <div class="tx__tags"><span class="tx__tag">Industrials</span><span class="tx__tag">Sell-side</span><span class="tx__tag">EU</span></div>
+          </article>
+          <article class="tx" data-sectors="real-assets">
+            <span class="tx__year">CC-2026-01 · MMXXVI</span>
+            <span class="tx__amount" data-count="180" data-prefix="$" data-suffix="M" data-decimals="0">$180M</span>
+            <h3 class="tx__title">Heritage real-asset programme</h3>
+            <p class="tx__desc">Revenue-generating heritage properties under refurbishment. Bilateral capital partner sought.</p>
+            <div class="tx__tags"><span class="tx__tag">Real assets</span><span class="tx__tag">Capital partner</span><span class="tx__tag">UK</span></div>
+          </article>
+          <article class="tx" data-sectors="healthcare">
+            <span class="tx__year">CC-2025-08 · MMXXV</span>
+            <span class="tx__amount" data-count="180" data-prefix="$" data-suffix="M" data-decimals="0">$180M</span>
+            <h3 class="tx__title">Healthcare services growth equity</h3>
+            <p class="tx__desc">Service-led platform raising for the next phase of geographic expansion.</p>
+            <div class="tx__tags"><span class="tx__tag">Healthcare</span><span class="tx__tag">Capital raise</span><span class="tx__tag">US</span></div>
+          </article>
+          <article class="tx" data-sectors="energy">
+            <span class="tx__year">CC-2024-12 · MMXXIV</span>
+            <span class="tx__amount" data-count="510" data-prefix="$" data-suffix="M" data-decimals="0">$510M</span>
+            <h3 class="tx__title">Energy transition sell-side</h3>
+            <p class="tx__desc">Dual-track sale process concluded with a structured strategic outcome.</p>
+            <div class="tx__tags"><span class="tx__tag">Energy transition</span><span class="tx__tag">Sell-side</span><span class="tx__tag">UK</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" style="height: 26px; filter: invert(0.92);" />
+          <div class="footer__brand-name">Cotswold Capital</div>
+          <p class="footer__tag">A boutique investment bank. Corporate finance, M&amp;A, and bespoke capital — under one institutional banner.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Firm</h4>
+          <ul role="list">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./index.html#solutions">Solutions</a></li>
+            <li><a href="./opportunities.html">Opportunities</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Offices</h4>
+          <ul role="list"><li>Mayfair · London</li><li>Midtown · New York</li><li>DIFC · Dubai</li></ul>
+        </div>
+        <div class="footer__col">
+          <h4>Regulation</h4>
+          <ul role="list"><li>FCA registration</li><li>Privacy &amp; legal</li><li>Modern slavery statement</li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© Cotswold Capital · MMXXVI</span>
+        <span>Discretion as a deliverable</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/animations.js" defer></script>
+  <script src="./scripts/interactions.js" defer></script>
+
+</body>
+</html>

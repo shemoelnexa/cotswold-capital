@@ -1,0 +1,99 @@
+The client is Cotswold Capital, Mark Hardwicke's boutique investment bank. Corporate finance, M&A advice, capital raising for high-net-worth clients. He's based in the UK, opening in New York and here in the UAE under the same brand.
+
+The way he described it: it's not one person, it's a network of senior independent advisors who all sit under the Cotswold Capital banner. So the site has to feel like an institution, not a person.
+
+Aesthetic reference he gave us: Apple website. Polished, minimalist, sterile, ultra-credible. No creative-agency-style imagery, no clever picture-behind-words layouts, no gimmicks. The job is to make a serious investor land on the page and immediately think "this is a proper firm."
+
+Current site is black with a gold logo. Mark wants to flip that: white background, rose gold logo, with a very subtle blue accent for the conservative/trust cue. He'll send the exact rose gold and blue hue codes.
+
+Pages are tight: 7–10 max. Mark is writing the copy himself (20 years in the industry, so let him).
+
+No rush at all — he's been clear that he'd rather it be right than quick. Eid + team absences mean we're realistically a couple of weeks out before active build. I just want you on the same page on the look and feel now so you can start collecting references.
+
+Full brief below.
+
+
+Designer Brief — Cotswold CapitalProject: Cotswold Capital website (new build, phase one)
+Client lead: Mark Hardwicke (Owner)
+NEXA lead: Jatin Mava
+PM: Mubeena
+Designer: Shemoel
+
+
+About the clientCotswold Capital is a UK-headquartered boutique investment bank, expanding into New York and the UAE under one unified brand. Services span corporate finance advisory, mergers and acquisitions, capital raising, and introducing high-net-worth investors to live opportunities. The firm is structured as a network of senior independent advisors operating under one credible banner.
+
+
+Brand direction
+Reference benchmark: Apple website. Minimalist, sterile, polished.
+Mood: Conservative, trustworthy, institutional, quiet confidence. No flourishes.
+What it must NOT look like: A creative agency. No layered hero imagery, no decorative graphics behind text, no gimmicky transitions.
+Replaces: Existing black + gold identity (Mark feels black reads "suspicious"; white reads "honest").
+
+
+
+Colour palette
+Background: White (primary).
+Logo / primary accent: Rose gold (replacing existing gold). Hue codes pending from Mark.
+Secondary accent: A specific shade of blue (Mark to provide), used sparingly. Accents only, no large blocks of blue.
+Body text / structural: Neutral greyscale, restrained.
+
+
+
+Typography
+Editorial, classical, restrained. Sans-serif preferred for body, with the option of a refined serif for headings to add institutional weight. Pitch two directions in your first pass.
+
+
+
+Site map (7–10 pages max)
+Home
+About Us / Who We Are
+What We Do
+Services
+Opportunities (dynamic, must support regular additions)
+Contact
+Optional: Insights / News (only if it earns its place)
+
+
+
+Key page treatments
+Opportunities: This is the credibility engine. Each opportunity needs a clean, factual layout: project name, scale, sector, status, contact CTA. Showcase pieces include the $4B anaerobic waste-to-energy plant and the ~$1B cremation industry venture. Design must accommodate frequent updates.
+Contact / inquiry forms: Embedded across the site. Two intent paths to surface: (a) clients seeking advisory services, (b) investors interested in current opportunities.
+About Us: Communicate the network model without naming every advisor. Show the institutional shape, not the headshots.
+
+
+
+Content
+Mark is writing all copy himself. We are not writing copy on this project.
+Our job on content: review for phrasing, jurisdictional safety, and any LLM/SEO positioning notes for phase two.
+
+
+
+Tech stack
+CMS / Site: HubSpot Content Hub (Starter Suite).
+CRM: HubSpot Starter ($9/mo annual). Mark registers; we add partner seats.
+Base theme: Human Magic theme, restyled. Logo, palette, typography, layout adapted to Cotswold Capital brand. Structure is reusable; styling is not.
+
+
+
+Out of scope for phase one
+SEO programme
+OpenClaw / LLM integration
+LinkedIn marketing automation
+Maintenance retainer (to be discussed separately)
+
+
+
+Timeline
+No hard deadline. Mark has explicitly said "right over quick."
+Realistic active build start: post-Eid + post-Lucy's leave (~two weeks out from 20 May).
+
+
+
+What I need from you
+Start a Cotswold Capital moodboard now. Pull 5–8 investment bank / private bank / advisory references that match the Apple-level restraint. Mark will send his own references too, happy to wait if you'd rather see his first.
+Two type direction options (all-sans vs serif-headline + sans-body).
+Rose gold + blue accent palette exploration. Hold until Mark sends his exact hues, but pre-explore the surrounding range.
+First wireframe pass on Home + Opportunities. These are the two pages that define the project.
+
+
+Shout if anything's unclear. I'll loop you in on the email going out to Mark today.
