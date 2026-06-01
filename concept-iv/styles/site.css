@@ -1,0 +1,545 @@
+/* ============================================================
+   Cotswold Capital — Concept IV components
+   Section-by-section translation of the Human Magic Figma frame
+   (1920 × 7116). Geometry/alignment preserved; brand applied.
+   ============================================================ */
+
+/* ---------- shared display helpers ---------- */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: var(--ls-display);
+}
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--t-h-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+}
+
+/* ============================================================
+   NAV  (Figma: Group 43 — y20, logo left / Let's Talk + Menu right)
+   ============================================================ */
+.nav {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 40;
+  padding-top: 20px;
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+/* white logo + nav over the hero image */
+.nav__brand img { height: 41px; width: auto; filter: brightness(0) invert(1); }
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: var(--t-ui);
+  font-weight: 500;
+  letter-spacing: var(--ls-tight);
+  color: #fff;
+}
+.nav__link { transition: opacity var(--d-quick) var(--ease-out); }
+.nav__link:hover { opacity: 0.6; }
+.nav__menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav__menu-icon { display: grid; gap: 5px; }
+.nav__menu-icon span {
+  display: block; width: 24px; height: 2px; background: currentColor;
+  transition: transform var(--d-quick) var(--ease-out);
+}
+
+/* ============================================================
+   HERO  (Figma: image 2 1920×993 + Limit Less + subhead + CTAs)
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 993;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  isolation: isolate;
+}
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+/* light scrim — aids the subhead/CTA without flattening the headline blend.
+   NOTE: no stacking context on .hero__content, so the title can
+   mix-blend-difference against the image painted behind it. */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg,
+    rgba(10,10,10,0.18) 0%,
+    rgba(10,10,10,0.06) 40%,
+    rgba(10,10,10,0.42) 100%);
+}
+.hero__content {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* push the block to ~47% as in the frame (headline baseline y469/993) */
+  justify-content: center;
+  padding-top: 6vh;
+  gap: clamp(16px, 2.4vw, 36px);
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--t-hero);
+  line-height: 0.9;
+  letter-spacing: var(--ls-display);
+  color: #fff;
+  mix-blend-mode: difference;   /* requested blend over the minimal image */
+  margin: 0;
+}
+.hero__sub {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--t-hero-sub);
+  color: #fff;
+  letter-spacing: var(--ls-tight);
+  max-width: 22ch;
+}
+.hero__cta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+
+/* ---------- pill buttons (Figma: Link - Light, 170×51) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  height: 51px;
+  padding: 0 22px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--t-ui);
+  letter-spacing: var(--ls-tight);
+  white-space: nowrap;
+  transition: background var(--d-base) var(--ease-out),
+              color var(--d-base) var(--ease-out),
+              border-color var(--d-base) var(--ease-out);
+}
+.btn svg { flex: none; transition: transform var(--d-base) var(--ease-out); }
+.btn:hover svg { transform: translateX(5px); }
+.btn--solid { background: #fff; color: var(--ink); }
+.btn--solid:hover { background: var(--rose); color: #fff; }
+.btn--outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.85); }
+.btn--outline:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.btn--ink { background: var(--ink); color: #fff; }
+.btn--ink:hover { background: var(--rose); }
+.btn--ink-outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn--ink-outline:hover { background: var(--ink); color: #fff; }
+
+/* ============================================================
+   LOGO STRIP  (Figma: Group 77 — two rows + divider Line 2)
+   placeholder abstract marks, greyscale
+   ============================================================ */
+.marks {
+  background: var(--surface);
+  padding: clamp(40px, 6vw, 72px) 0 0;
+}
+.marks__row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 40px);
+  padding-block: clamp(14px, 2vw, 22px);
+}
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  opacity: 0.7;
+  transition: opacity var(--d-base) var(--ease-out);
+}
+.mark:hover { opacity: 1; }
+.mark img {
+  max-height: 38px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.marks__rule {
+  height: 1px;
+  background: var(--rule);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+
+/* ============================================================
+   CAPABILITIES HEADING  (Figma: 1:25 — image-filled 231px)
+   ============================================================ */
+.cap-head {
+  padding: clamp(56px, 9vw, 130px) 0 clamp(36px, 6vw, 80px);
+}
+.cap-head__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--t-capabilities);
+  line-height: 0.84;
+  letter-spacing: var(--ls-display);
+  /* image fill via background-clip */
+  background-image: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2000&q=80&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+/* ============================================================
+   CAPABILITIES LIST  (Figma: Group 102 — left list / right copy)
+   ============================================================ */
+.caps {
+  padding-bottom: clamp(64px, 9vw, 120px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.78fr);
+  gap: clamp(40px, 6vw, 120px);
+}
+.caps__list { display: flex; flex-direction: column; }
+.cap-item {
+  display: block;
+  padding: clamp(24px, 2.4vw, 34px) 0;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  transition: color var(--d-base) var(--ease-out);
+}
+.cap-item:first-child { padding-top: 0; }
+.cap-item__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--t-service);
+  line-height: 0.92;
+  letter-spacing: var(--ls-display);
+}
+.cap-item--active { padding-bottom: clamp(28px, 3vw, 44px); }
+.cap-item__arrow {
+  margin-top: clamp(24px, 3vw, 48px);
+  color: var(--rose);
+}
+.cap-item__arrow svg { width: 66px; height: 66px; }
+.cap-item:not(.cap-item--active):hover { color: var(--rose); }
+
+.caps__copy { padding-top: clamp(8px, 1.4vw, 26px); }
+.caps__lede {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-service-lede);
+  line-height: 1.12;
+  letter-spacing: var(--ls-tight);
+  color: var(--ink);
+  margin-bottom: clamp(20px, 2vw, 30px);
+}
+.caps__body p {
+  font-size: var(--t-body);
+  line-height: 1.3;
+  color: var(--ink);
+}
+.caps__body p + p { margin-top: clamp(12px, 1.2vw, 16px); }
+
+/* ============================================================
+   FEATURED WORK HEADER  (Figma: Group 49)
+   ============================================================ */
+.work-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 32px;
+  padding-bottom: clamp(28px, 3.4vw, 48px);
+}
+.work-head__eyebrow { display: block; margin-bottom: 10px; }
+.work-head__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--t-work);
+  line-height: 0.9;
+  letter-spacing: var(--ls-display);
+}
+.work-head__note {
+  max-width: 42ch;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+
+/* ============================================================
+   WORK GRID  (Figma: 6 images, 2 cols × 3 rows, full bleed)
+   ============================================================ */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.work-cell {
+  position: relative;
+  aspect-ratio: 960 / 445;
+  overflow: hidden;
+  display: block;
+}
+.work-cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 600ms var(--ease-out);
+}
+.work-cell:hover img { transform: scale(1.04); }
+/* hover-reveal scrim so the white label reads on any image */
+.work-cell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10,10,10,0.50), rgba(10,10,10,0.05) 65%);
+  opacity: 0;
+  transition: opacity var(--d-base) var(--ease-out);
+  pointer-events: none;
+}
+.work-cell:hover::after,
+.work-cell:focus-visible::after { opacity: 1; }
+/* white text + icon, no shape, hover-only */
+.work-cell__view {
+  position: absolute;
+  z-index: 2;                 /* sit above the hover scrim */
+  left: clamp(20px, 3vw, 42px);
+  top: 50%;
+  transform: translateY(-50%) translateY(6px);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.0625rem;
+  letter-spacing: var(--ls-tight);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity var(--d-base) var(--ease-out), transform var(--d-base) var(--ease-out);
+}
+.work-cell:hover .work-cell__view,
+.work-cell:focus-visible .work-cell__view {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+.work-cell__view-icon {
+  display: grid; place-items: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+
+/* ============================================================
+   WORK CTAS  (Figma: Group 53 — View All / Contact us, centered)
+   ============================================================ */
+.work-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: clamp(36px, 5vw, 64px) 0 clamp(48px, 7vw, 96px);
+}
+
+/* ============================================================
+   BILLBOARD CTA  (Figma: Rectangle 14 1629×690 + overlay)
+   ============================================================ */
+.billboard { padding-bottom: clamp(48px, 7vw, 96px); }
+.billboard__frame {
+  position: relative;
+  aspect-ratio: 1629 / 690;
+  min-height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.billboard__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.billboard__img::after { content: ""; }
+.billboard__scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(10,10,10,0.55), rgba(10,10,10,0.25) 60%, rgba(10,10,10,0.45));
+}
+.billboard__inner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 22px);
+}
+.billboard__kicker {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.4vw, 1.65rem);
+  line-height: 1.15;
+}
+.billboard__talk {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(20px, 2.2vw, 40px);
+  color: #fff;
+  transition: color var(--d-base) var(--ease-out);
+}
+.billboard__talk-word {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--t-talk);
+  line-height: 0.9;
+  letter-spacing: var(--ls-display);
+}
+.billboard__talk svg { width: clamp(48px, 4.4vw, 84px); height: auto; transition: transform var(--d-base) var(--ease-out); }
+.billboard__talk:hover svg { transform: translate(6px,-6px); }
+
+/* ============================================================
+   OUR STATEMENT  (Figma: Group 103)
+   ============================================================ */
+.statement {
+  text-align: center;
+  padding: clamp(48px, 8vw, 110px) 0 clamp(56px, 9vw, 120px);
+  max-width: 1160px;
+  margin-inline: auto;
+}
+.statement__eyebrow {
+  display: block;
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--ink-3);
+  margin-bottom: clamp(20px, 2.4vw, 36px);
+}
+.statement__body {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--t-statement);
+  line-height: 1.22;
+  letter-spacing: var(--ls-tight);
+  color: var(--ink);
+}
+.statement__body strong { font-weight: 600; }
+.statement__cta { margin-top: clamp(32px, 4vw, 56px); display: inline-flex; }
+
+/* ============================================================
+   FOOTER  (Figma: Group 99 — #0a0a0a, 405px)
+   ============================================================ */
+.footer {
+  background: var(--ink-surface);
+  color: var(--ink-inv);
+  padding: clamp(56px, 7vw, 80px) 0 clamp(40px, 5vw, 60px);
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(6, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 44px);
+  align-items: start;
+}
+.footer__brand img { height: 41px; width: auto; margin-bottom: 24px; }
+.footer__tag {
+  font-size: var(--t-foot);
+  line-height: 1.4;
+  color: var(--ink-inv-2);
+  max-width: 30ch;
+  margin-bottom: 24px;
+}
+.footer__form {
+  display: flex;
+  max-width: 456px;
+  height: 51px;
+}
+.footer__form input {
+  flex: 1;
+  height: 51px;
+  padding: 0 14px;
+  background: rgba(53,53,53,0.25);
+  border: 1px solid var(--rose-soft);
+  border-right: none;
+  color: #fff;
+  font-size: var(--t-foot);
+}
+.footer__form input::placeholder { color: rgba(226,225,225,0.5); }
+.footer__form button {
+  height: 51px;
+  padding: 0 22px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.9625rem;
+  transition: background var(--d-base) var(--ease-out), color var(--d-base) var(--ease-out);
+}
+.footer__form button:hover { background: var(--rose); color: #fff; }
+
+.footer__col-head {
+  font-weight: 500;
+  font-size: var(--t-foot-head);
+  color: var(--ink-inv-3);
+  margin-bottom: 22px;
+  letter-spacing: var(--ls-tight);
+}
+.footer__col li { font-size: var(--t-foot); line-height: 1.45; color: var(--ink-inv); }
+.footer__col a { transition: color var(--d-quick) var(--ease-out); }
+.footer__col a:hover { color: var(--rose-soft); }
+.footer__col .sub { color: var(--ink-inv-3); }
+
+.footer__social { display: flex; gap: 12px; }
+.footer__social a {
+  display: grid; place-items: center;
+  width: 32px; height: 32px;
+  border-radius: 4px;
+  color: rgba(255,255,255,0.8);
+  transition: background var(--d-quick) var(--ease-out), color var(--d-quick) var(--ease-out);
+}
+.footer__social a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 0.8125rem;
+  color: var(--ink-inv-3);
+}
+.footer__legal a { color: var(--ink-inv-3); }
+.footer__legal a:hover { color: var(--ink-inv-2); }
+.footer__legal .copy { text-transform: uppercase; letter-spacing: 0.04em; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .caps { grid-template-columns: 1fr; }
+  .footer__grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer__brand { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+  .nav__right { gap: 22px; }
+  .marks__row { grid-template-columns: repeat(3, 1fr); }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-head { grid-template-columns: 1fr; align-items: start; }
+  .work-head__note { grid-row: 2; }
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .footer__grid { grid-template-columns: 1fr; }
+  .hero__cta { width: 100%; }
+}
