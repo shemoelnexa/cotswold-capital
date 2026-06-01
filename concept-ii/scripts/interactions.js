@@ -97,8 +97,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initCursor();
     initMagnetic();
-    initCube();
   });
 })();

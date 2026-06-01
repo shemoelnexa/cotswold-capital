@@ -29,15 +29,14 @@
 }
 
 /* ---------------------------------------------------------
-   Nav — clean, thin, scrolled state
+   Nav — editorial, two-row, institutional
 --------------------------------------------------------- */
 
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
-  padding-block: var(--s-4);
-  background: color-mix(in oklab, var(--surface) 88%, transparent);
+  background: color-mix(in oklab, var(--surface) 92%, transparent);
   backdrop-filter: blur(14px) saturate(1.1);
   -webkit-backdrop-filter: blur(14px) saturate(1.1);
   border-bottom: 1px solid transparent;
@@ -45,9 +44,51 @@
               padding var(--d-soft) var(--ease-out);
 }
 
-.nav[data-scrolled="true"] {
-  border-bottom-color: var(--rule);
-  padding-block: var(--s-3);
+.nav[data-scrolled="true"] { border-bottom-color: var(--rule); }
+
+/* Thin upper strip with offices — editorial tag line above the nav row */
+.nav__meta {
+  border-bottom: 1px solid var(--rule);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.nav__meta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-5);
+  padding-block: 8px;
+  min-height: 32px;
+}
+
+.nav__meta-cities {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.nav__meta-cities span { position: relative; }
+
+.nav__meta-cities span + span::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background: var(--ink-3);
+  border-radius: 50%;
+  margin-right: var(--s-4);
+  vertical-align: middle;
+}
+
+.nav__meta-tag {
+  color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+  .nav__meta { display: none; }
 }
 
 .nav__inner {
@@ -55,7 +96,11 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--s-5);
+  padding-block: var(--s-4);
+  transition: padding-block var(--d-soft) var(--ease-out);
 }
+
+.nav[data-scrolled="true"] .nav__inner { padding-block: var(--s-3); }
 
 .nav__brand {
   display: inline-flex;
@@ -64,63 +109,87 @@
   color: var(--ink);
 }
 
-.nav__brand .mark { height: 24px; width: auto; }
+.nav__brand .mark { height: 26px; width: auto; }
 
 .nav__brand .wordmark {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: -0.005em;
+  font-size: 1.0625rem;
+  letter-spacing: -0.006em;
 }
 
 .nav__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: var(--s-6);
   align-items: center;
+  gap: 0;
+}
+
+.nav__links li { position: relative; }
+
+/* Thin hairline rule between nav links — institutional */
+.nav__links li + li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 12px;
+  background: var(--rule-strong);
+  transform: translateY(-50%);
+  opacity: 0.6;
 }
 
 .nav__link {
-  font-size: var(--t-small);
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--ink-2);
-  padding-block: 4px;
-  position: relative;
+  padding: 6px var(--s-5);
   transition: color var(--d-quick) var(--ease-out);
 }
 
-.nav__link::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--d-base) var(--ease-out);
-}
-
 .nav__link:hover { color: var(--ink); }
-.nav__link:hover::after { transform: scaleX(1); }
-.nav__link[aria-current="page"] { color: var(--ink); }
-.nav__link[aria-current="page"]::after { transform: scaleX(1); }
+
+/* Active state is not visually highlighted — per brief */
+.nav__link[aria-current="page"] { color: var(--ink-2); }
 
 .nav__cta {
-  font-size: var(--t-small);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--ink);
   background: transparent;
-  border: 1px solid var(--rule-strong);
-  padding: 9px 16px;
-  border-radius: var(--r-1);
-  transition: border-color var(--d-quick) var(--ease-out),
-              background var(--d-quick) var(--ease-out),
+  border: 1px solid var(--ink);
+  padding: 10px 18px;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--d-quick) var(--ease-out),
               transform var(--d-quick) var(--ease-out);
 }
 
-.nav__cta:hover {
-  border-color: var(--ink);
+.nav__cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: var(--ink);
-  color: var(--surface);
+  transform: translateY(100%);
+  transition: transform 380ms var(--ease-out);
+  z-index: -1;
 }
 
+.nav__cta:hover { color: var(--surface); }
+.nav__cta:hover::before { transform: translateY(0); }
 .nav__cta:active { transform: scale(0.97); }
 
 /* ---------------------------------------------------------
@@ -149,11 +218,7 @@
   color: var(--ink-3);
 }
 
-.hero__eyebrow .dot {
-  width: 6px; height: 6px;
-  background: var(--rose);
-  border-radius: 50%;
-}
+.hero__eyebrow .dot { display: none; }
 
 .hero__headline {
   font-family: var(--font-display);
@@ -389,19 +454,10 @@
 .status {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   color: var(--blue);
 }
 
-.status::before {
-  content: "";
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--blue);
-}
-
 .status[data-state="closing"] { color: var(--ink-3); }
-.status[data-state="closing"]::before { background: var(--ink-3); }
 
 .feature__title {
   font-family: var(--font-display);
@@ -926,62 +982,83 @@ html.js .reveal-stagger:not(.is-in) > * {
 .reveal-stagger.is-in > *:nth-child(5) { transition-delay: 280ms; opacity: 1; transform: none; }
 
 /* ---------------------------------------------------------
-   Custom cursor
+   Custom cursor — small filled square (no crosshair)
+   On interactive hover the square rotates into a diamond and
+   grows. On cinematic tiles it morphs into a "View" label.
 --------------------------------------------------------- */
 
-.cursor-dot, .cursor-ring {
+.cursor-dot {
   position: fixed;
   top: 0; left: 0;
   pointer-events: none;
   z-index: 9999;
-  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  background: #ffffff;
   opacity: 0;
-  transition: opacity 220ms var(--ease-out);
+  transition: opacity 220ms var(--ease-out),
+              width 280ms var(--ease-out),
+              height 280ms var(--ease-out),
+              margin 280ms var(--ease-out),
+              background 280ms var(--ease-out),
+              border-radius 280ms var(--ease-out);
   will-change: transform;
-  /* difference blend → cursor stays visible on both light + dark sections */
   mix-blend-mode: difference;
 }
 
-.cursor-dot {
-  width: var(--cursor-dot);
-  height: var(--cursor-dot);
-  background: #ffffff;
-  margin: calc(var(--cursor-dot) / -2) 0 0 calc(var(--cursor-dot) / -2);
+/* Rotation wrapper — handled with a transform composed in the JS
+   translate. We use a child pseudo for the rotation. */
+.cursor-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transition: transform 320ms var(--ease-out);
 }
 
 .cursor-ring {
-  width: var(--cursor-ring);
-  height: var(--cursor-ring);
-  border: 1px solid #ffffff;
-  margin: calc(var(--cursor-ring) / -2) 0 0 calc(var(--cursor-ring) / -2);
-  transition:
-    opacity 220ms var(--ease-out),
-    width 280ms var(--ease-out),
-    height 280ms var(--ease-out),
-    border-color 280ms var(--ease-out),
-    background 280ms var(--ease-out),
-    margin 280ms var(--ease-out);
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+  mix-blend-mode: difference;
+  transition: opacity 220ms var(--ease-out),
+              width 280ms var(--ease-out),
+              height 280ms var(--ease-out),
+              margin 280ms var(--ease-out),
+              border-color 280ms var(--ease-out),
+              background 280ms var(--ease-out);
+  will-change: transform;
 }
 
-body[data-cursor="custom"] .cursor-dot,
-body[data-cursor="custom"] .cursor-ring {
-  opacity: 1;
+body[data-cursor="custom"] .cursor-dot { opacity: 1; }
+body[data-cursor="custom"] .cursor-ring { opacity: 0; }
+
+/* On interactive hover, the square grows and rotates 45° into a diamond */
+.cursor-dot[data-state="interactive"] {
+  width: 11px;
+  height: 11px;
+  margin: -5.5px 0 0 -5.5px;
 }
 
-/* Ring swell on interactive hover */
-.cursor-ring[data-state="interactive"] {
-  width: calc(var(--cursor-ring) * 1.5);
-  height: calc(var(--cursor-ring) * 1.5);
-  margin: calc(var(--cursor-ring) * -0.75) 0 0 calc(var(--cursor-ring) * -0.75);
-  border-color: #b0d4ff;
+.cursor-dot[data-state="interactive"]::before {
+  transform: rotate(45deg);
 }
 
-.cursor-ring[data-state="view"] {
+/* On "view" tiles, the ring inflates into a "View" label and the
+   square fades out so only the label is visible */
+body[data-cursor="custom"] .cursor-ring[data-state="view"] {
   width: 88px;
   height: 88px;
   margin: -44px 0 0 -44px;
-  border-color: #ffd9c8;
+  border: 1px solid #ffd9c8;
   background: color-mix(in oklab, #ffd9c8 12%, transparent);
+  opacity: 1;
 }
 
 .cursor-ring[data-state="view"]::after {
@@ -995,6 +1072,8 @@ body[data-cursor="custom"] .cursor-ring {
   text-transform: uppercase;
   color: var(--rose);
 }
+
+body[data-cursor="custom"] .cursor-dot[data-state="view"] { opacity: 0; }
 
 @media (hover: none) {
   .cursor-dot, .cursor-ring { display: none; }
@@ -1322,22 +1401,7 @@ a.inline-link:hover { background-size: 100% 1px; }
 
 .section[data-meta] { position: relative; }
 
-.section-meta {
-  position: absolute;
-  top: var(--s-9);
-  left: clamp(8px, 1.4vw, 24px);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  display: none;
-}
-
-@media (min-width: 1180px) {
-  .section-meta { display: block; }
-}
+.section-meta { display: none; }
 
 /* ---------------------------------------------------------
    Small screens
@@ -1389,26 +1453,23 @@ a.inline-link:hover { background-size: 100% 1px; }
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
   color: var(--ink-3);
-  padding: 8px 14px;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
+  padding: 0;
+  border: 0;
   width: max-content;
-}
-
-.hero-iv__status .pulse {
   position: relative;
-  width: 8px; height: 8px;
-  background: var(--rose);
-  border-radius: 50%;
+  padding-left: 30px;
 }
 
-.hero-iv__status .pulse::after {
+/* Thin horizontal hairline before the status — editorial, no dot */
+.hero-iv__status::before {
   content: "";
   position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 1px solid var(--rose);
-  animation: pulse-ring 2.4s var(--ease-soft) infinite;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background: var(--ink-3);
+  transform: translateY(-50%);
 }
 
 @keyframes pulse-ring {
@@ -1738,18 +1799,18 @@ a.inline-link:hover { background-size: 100% 1px; }
   background: linear-gradient(180deg, transparent 60%, color-mix(in oklab, var(--ink) 70%, transparent) 100%);
 }
 
-/* ---- Dark section (Opportunities) ---- */
+/* ---- Opportunities section (light, warm cream surface) ---- */
 
 .section--dark {
-  background: var(--ink-dark);
-  color: var(--on-dark);
+  background: var(--surface-2);
+  color: var(--ink);
   position: relative;
   overflow: hidden;
 }
 
-.section--dark .s-head__eyebrow { color: var(--on-dark-3); }
-.section--dark .s-head__title { color: var(--on-dark); }
-.section--dark .s-head__sub { color: var(--on-dark-2); }
+.section--dark .s-head__eyebrow { color: var(--ink-3); }
+.section--dark .s-head__title { color: var(--ink); }
+.section--dark .s-head__sub { color: var(--ink-2); }
 
 /* Curtain transition on entry — only when JS is active */
 .section--dark::before {
@@ -1767,7 +1828,7 @@ a.inline-link:hover { background-size: 100% 1px; }
 html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
 .section--dark.is-in::before { transform: scaleY(0); }
 
-/* Cinematic dark feature */
+/* Cinematic feature (light) */
 .cine-feature {
   display: grid;
   grid-template-columns: 1fr;
@@ -1795,7 +1856,7 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  filter: saturate(0.82) contrast(1.06) brightness(0.92);
+  filter: saturate(0.85) contrast(1.04);
   transition: transform 1400ms var(--ease-out),
               filter 600ms var(--ease-out);
   will-change: transform;
@@ -1803,18 +1864,7 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
 
 .cine-feature:hover .cine-feature__media img {
   transform: scale(1.04);
-  filter: saturate(0.92) contrast(1.08) brightness(0.95);
-}
-
-.cine-feature__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 50%,
-    color-mix(in oklab, var(--ink-dark) 50%, transparent) 100%
-  );
+  filter: saturate(0.95) contrast(1.05);
 }
 
 .cine-feature__body {
@@ -1830,13 +1880,12 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   font-size: var(--t-meta);
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
-  color: var(--on-dark-3);
+  color: var(--ink-3);
 }
 
 .cine-feature__meta .status {
   color: var(--rose);
 }
-.cine-feature__meta .status::before { background: var(--rose); }
 
 .cine-feature__title {
   font-family: var(--font-display);
@@ -1844,11 +1893,11 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   font-size: clamp(1.75rem, 2.6vw, 2.75rem);
   line-height: 1.06;
   letter-spacing: -0.022em;
-  color: var(--on-dark);
+  color: var(--ink);
 }
 
 .cine-feature__desc {
-  color: var(--on-dark-2);
+  color: var(--ink-2);
   font-size: 1.0625rem;
   line-height: 1.55;
   max-width: 52ch;
@@ -1859,7 +1908,7 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   align-items: baseline;
   gap: var(--s-4);
   margin-top: var(--s-3);
-  border-top: 1px solid var(--rule-dark);
+  border-top: 1px solid var(--rule-strong);
   padding-top: var(--s-4);
 }
 
@@ -1869,12 +1918,12 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   font-size: clamp(3rem, 6.5vw, 6.5rem);
   line-height: 0.92;
   letter-spacing: -0.034em;
-  color: var(--on-dark);
+  color: var(--ink);
 }
 
 .cine-feature__figure-unit {
   font-size: var(--t-small);
-  color: var(--on-dark-3);
+  color: var(--ink-3);
   max-width: 18ch;
 }
 
@@ -1884,8 +1933,8 @@ html.js .section--dark:not(.is-in)::before { transform: scaleY(1); }
   gap: var(--s-3);
   margin-top: var(--s-3);
   font-size: var(--t-small);
-  color: var(--on-dark);
-  border-bottom: 1px solid var(--rule-dark);
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
   padding-bottom: 6px;
   width: max-content;
   transition: color var(--d-base) var(--ease-out),
@@ -1936,11 +1985,12 @@ html.js .curtain:not(.is-in)::before { transform: scaleY(1); }
 }
 
 .pull-quote__attr {
-  margin-top: var(--s-5);
+  margin: var(--s-5) auto 0;
   font-size: var(--t-meta);
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
   color: var(--ink-3);
+  max-width: max-content;
 }
 
 /* ---------------------------------------------------------

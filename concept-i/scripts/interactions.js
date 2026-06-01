@@ -42,17 +42,21 @@
     }
     requestAnimationFrame(tick);
 
-    // State-aware hover
+    // State-aware hover — both crosshair and ring stay coordinated
     const interactiveSel = 'a, button, .intent, .chip, [data-cursor-state]';
     document.addEventListener('mouseover', (e) => {
       const t = e.target.closest(interactiveSel);
       if (!t) return;
       const state = t.dataset.cursorState || 'interactive';
       ring.dataset.state = state;
+      dot.dataset.state = state;
     });
     document.addEventListener('mouseout', (e) => {
       const t = e.target.closest(interactiveSel);
-      if (t) ring.removeAttribute('data-state');
+      if (t) {
+        ring.removeAttribute('data-state');
+        dot.removeAttribute('data-state');
+      }
     });
   }
 
@@ -207,7 +211,6 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initCursor();
     initMagnetic();
     initTilt();
     initServicePreview();

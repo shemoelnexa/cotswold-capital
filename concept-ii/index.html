@@ -31,6 +31,14 @@
 
   <!-- ============ Nav ============ -->
   <header class="nav" data-scrolled="false">
+    <div class="nav__meta">
+      <div class="container nav__meta-inner">
+        <div class="nav__meta-cities">
+          <span>London</span><span>New York</span><span>Dubai</span>
+        </div>
+        <span class="nav__meta-tag">Bespoke capital for institutional decisions</span>
+      </div>
+    </div>
     <div class="container nav__inner">
       <a class="nav__brand" href="./index.html" aria-label="Cotswold Capital home">
         <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" />
@@ -55,7 +63,7 @@
       <div class="hero__copy reveal-stagger">
         <span class="hero__eyebrow">
           <span class="dot" aria-hidden="true"></span>
-          MMXXVI · Live mandates of over $5B
+          Live mandates of over $5B
         </span>
         <h1 class="hero__headline">
           Bespoke capital for <em>institutional decisions.</em>
@@ -76,38 +84,35 @@
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <div class="cube">
-          <div class="cube__face cube__face--front"></div>
-          <div class="cube__face cube__face--back"></div>
-          <div class="cube__face cube__face--right"></div>
-          <div class="cube__face cube__face--left"></div>
-          <div class="cube__face cube__face--top"></div>
-          <div class="cube__face cube__face--bottom"></div>
+        <div class="hero__photo">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80&auto=format&fit=crop"
+            alt="A refined boardroom interior at golden hour."
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1400" height="1750" />
         </div>
       </div>
     </section>
 
-    <!-- ============ Full-bleed banner 01 — cities sweep ============ -->
-    <section class="banner reveal">
-      <img class="banner__img"
-           src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=2400&q=78&auto=format&fit=crop"
-           alt="A view across the City of London at golden hour."
-           loading="lazy" decoding="async" width="2400" height="1350" />
-      <div class="banner__inner">
-        <span class="banner__eyebrow">In residence · MMXXVI</span>
-        <h2 class="banner__title">Three cities. <em>One firm.</em></h2>
-        <p class="banner__sub">From the City of London to Midtown Manhattan to DIFC — a single standard of care across the three time zones that matter for transatlantic and Gulf-linked capital.</p>
-        <div class="banner__cities">
-          <span>London</span>
-          <span>New York</span>
-          <span>Dubai</span>
-        </div>
+    <!-- ============ Statement — three cities, one firm ============ -->
+    <section class="statement section--surface-2 reveal">
+      <div class="container">
+        <span class="statement__eyebrow">In residence · 2026</span>
+        <h2 class="statement__title">Three cities. <em>One firm.</em></h2>
+        <p class="statement__sub">From the City of London to Midtown Manhattan to DIFC — a single standard of care across the three time zones that matter for transatlantic and Gulf-linked capital.</p>
+        <ul class="statement__cities" role="list">
+          <li><span class="statement__city-name">London</span><span class="statement__city-meta">Mayfair · Headquarters</span></li>
+          <li><span class="statement__city-name">New York</span><span class="statement__city-meta">Midtown · North America</span></li>
+          <li><span class="statement__city-name">Dubai</span><span class="statement__city-meta">DIFC · Gulf &amp; South Asia</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- ============ Stats grid ============ -->
     <section>
-      <div class="container container--wide">
+      <div class="container">
         <div class="stats reveal-stagger">
           <div class="stat">
             <span class="stat__num"><span data-count="2026" data-prefix="" data-suffix="" data-decimals="0">2026</span></span>
@@ -162,7 +167,7 @@
 
     <!-- ============ Coverage / 3 cities ============ -->
     <section class="section section--tight">
-      <div class="container container--wide">
+      <div class="container">
         <header class="s-head reveal">
           <span class="section-tag">02 · Coverage</span>
           <h2 class="s-head__title">Three cities. One firm.</h2>
@@ -274,16 +279,17 @@
       </div>
     </section>
 
-    <!-- ============ Full-bleed banner 02 — boardroom ============ -->
-    <section class="banner reveal">
-      <img class="banner__img"
-           src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=2400&q=78&auto=format&fit=crop"
-           alt="A refined boardroom interior."
-           loading="lazy" decoding="async" width="2400" height="1600" />
-      <div class="banner__inner">
-        <span class="banner__eyebrow">A standard of care</span>
-        <h2 class="banner__title">Every meeting, taken by <em>a partner.</em></h2>
-        <p class="banner__sub">No junior bench finishing your second draft. No leverage on the relationship. Every decision held in writing, revisited at every gate.</p>
+    <!-- ============ Statement — standard of care ============ -->
+    <section class="statement statement--centered reveal">
+      <div class="container">
+        <span class="statement__eyebrow">A standard of care</span>
+        <h2 class="statement__title">Every meeting, taken by <em>a partner.</em></h2>
+        <p class="statement__sub">No junior bench finishing your second draft. No leverage on the relationship. Every decision held in writing, revisited at every gate.</p>
+        <ul class="statement__principles" role="list">
+          <li><span class="statement__principle-num">01</span><span class="statement__principle-name">Partner-led</span></li>
+          <li><span class="statement__principle-num">02</span><span class="statement__principle-name">In writing</span></li>
+          <li><span class="statement__principle-num">03</span><span class="statement__principle-name">At every gate</span></li>
+        </ul>
       </div>
     </section>
 
@@ -301,7 +307,7 @@
         <div class="transactions reveal-stagger">
 
           <article class="tx">
-            <span class="tx__year">MMXXVI</span>
+            <span class="tx__year">2026</span>
             <span class="tx__amount" data-count="4" data-prefix="$" data-suffix="B" data-decimals="0">$4B</span>
             <h3 class="tx__title">Anaerobic waste-to-energy plant</h3>
             <p class="tx__desc">Multi-jurisdiction project finance, equity and structured credit placement.</p>
@@ -312,7 +318,7 @@
           </article>
 
           <article class="tx">
-            <span class="tx__year">MMXXVI</span>
+            <span class="tx__year">2026</span>
             <span class="tx__amount" data-count="1" data-prefix="$" data-suffix="B" data-decimals="0">$1B</span>
             <h3 class="tx__title">Cremation industry consolidation</h3>
             <p class="tx__desc">Buy &amp; build platform with senior debt and minority equity tranches.</p>
@@ -323,7 +329,7 @@
           </article>
 
           <article class="tx">
-            <span class="tx__year">MMXXVI</span>
+            <span class="tx__year">2026</span>
             <span class="tx__amount" data-count="320" data-prefix="$" data-suffix="M" data-decimals="0">$320M</span>
             <h3 class="tx__title">Specialty fabrications platform</h3>
             <p class="tx__desc">Founder-owned, multi-site sell-side mandate to a strategic partner.</p>
@@ -334,7 +340,7 @@
           </article>
 
           <article class="tx">
-            <span class="tx__year">MMXXV</span>
+            <span class="tx__year">2025</span>
             <span class="tx__amount" data-count="240" data-prefix="$" data-suffix="M" data-decimals="0">$240M</span>
             <h3 class="tx__title">Strategic advisory</h3>
             <p class="tx__desc">Multi-year retained advisory across capital structure decisions.</p>
@@ -345,7 +351,7 @@
           </article>
 
           <article class="tx">
-            <span class="tx__year">MMXXV</span>
+            <span class="tx__year">2025</span>
             <span class="tx__amount" data-count="180" data-prefix="$" data-suffix="M" data-decimals="0">$180M</span>
             <h3 class="tx__title">Healthcare services capital raise</h3>
             <p class="tx__desc">Growth equity placement for a service-led healthcare platform.</p>
@@ -356,7 +362,7 @@
           </article>
 
           <article class="tx">
-            <span class="tx__year">MMXXIV</span>
+            <span class="tx__year">2024</span>
             <span class="tx__amount" data-count="510" data-prefix="$" data-suffix="M" data-decimals="0">$510M</span>
             <h3 class="tx__title">Energy transition sell-side</h3>
             <p class="tx__desc">Dual-track process culminating in a structured strategic sale.</p>
@@ -391,7 +397,7 @@
                    alt="Market analytics." loading="lazy" decoding="async" width="800" height="600" />
             </div>
             <div class="insight__meta">
-              <span class="insight__category">Essay</span><span>·</span><span>6 min</span><span>·</span><span>MMXXVI</span>
+              <span class="insight__category">Essay</span><span>·</span><span>6 min</span><span>·</span><span>2026</span>
             </div>
             <h3 class="insight__title">Why family offices are bypassing the bulge bracket.</h3>
             <p class="insight__excerpt">The advisory market has bifurcated. The middle is where conviction goes to die.</p>
@@ -406,7 +412,7 @@
                    alt="Industrial-scale infrastructure." loading="lazy" decoding="async" width="800" height="600" />
             </div>
             <div class="insight__meta">
-              <span class="insight__category">Brief</span><span>·</span><span>9 min</span><span>·</span><span>MMXXVI</span>
+              <span class="insight__category">Brief</span><span>·</span><span>9 min</span><span>·</span><span>2026</span>
             </div>
             <h3 class="insight__title">Energy transition: when scale stops being scary.</h3>
             <p class="insight__excerpt">Off-take contracting is the variable that turned waste-to-energy into a category.</p>
@@ -421,7 +427,7 @@
                    alt="A refined boardroom." loading="lazy" decoding="async" width="800" height="600" />
             </div>
             <div class="insight__meta">
-              <span class="insight__category">Note</span><span>·</span><span>4 min</span><span>·</span><span>MMXXVI</span>
+              <span class="insight__category">Note</span><span>·</span><span>4 min</span><span>·</span><span>2026</span>
             </div>
             <h3 class="insight__title">The architecture of a senior-led mandate.</h3>
             <p class="insight__excerpt">What partner-led actually means, in writing. The mechanics matter more than the slogan.</p>
@@ -436,75 +442,73 @@
     <!-- ============ Partner CTA ============ -->
     <section class="partner" id="contact">
       <div class="container">
-        <div class="partner__inner">
-          <div class="partner__copy reveal-stagger">
+        <div class="partner__intro reveal-stagger">
+          <div class="partner__copy">
             <span class="partner__eyebrow">06 · Partner with us</span>
             <h2 class="partner__title">A conversation, <em>in confidence.</em></h2>
             <p class="partner__sub">Whether you are seeking advisory or evaluating an opportunity, write privately. Every enquiry is acknowledged by a partner within one business day.</p>
-
-            <div class="contact" style="margin-top: var(--s-5);">
-              <div class="contact__intents">
-                <label class="intent">
-                  <input type="radio" name="intent" value="advisory" checked />
-                  <span>
-                    <span class="intent__title" style="color: var(--on-dark);">I am seeking advisory</span>
-                    <span class="intent__desc" style="color: var(--on-dark-2);">M&amp;A, capital raising, or corporate finance counsel.</span>
-                  </span>
-                </label>
-                <label class="intent">
-                  <input type="radio" name="intent" value="investor" />
-                  <span>
-                    <span class="intent__title" style="color: var(--on-dark);">I am an investor</span>
-                    <span class="intent__desc" style="color: var(--on-dark-2);">Request a current opportunity brief under NDA.</span>
-                  </span>
-                </label>
-              </div>
-              <form class="form" onsubmit="event.preventDefault(); alert('This is a design concept. Form is not wired.');">
-                <div class="form__row">
-                  <div class="field">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" required />
-                  </div>
-                  <div class="field">
-                    <label for="org">Organisation</label>
-                    <input id="org" type="text" />
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="field">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" required />
-                  </div>
-                  <div class="field">
-                    <label for="jurisdiction">Jurisdiction</label>
-                    <select id="jurisdiction" style="background: transparent;">
-                      <option>United Kingdom</option>
-                      <option>United States</option>
-                      <option>United Arab Emirates</option>
-                      <option>Switzerland</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <button class="btn btn--on-dark" type="submit">
-                    Send privately
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
-
           <div class="partner__visual" aria-hidden="true">
-            <div class="cube">
-              <div class="cube__face cube__face--front"></div>
-              <div class="cube__face cube__face--back"></div>
-              <div class="cube__face cube__face--right"></div>
-              <div class="cube__face cube__face--left"></div>
-              <div class="cube__face cube__face--top"></div>
-              <div class="cube__face cube__face--bottom"></div>
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop"
+              alt=""
+              loading="lazy" decoding="async"
+              width="1200" height="1500" />
+          </div>
+        </div>
+
+        <div class="partner__form-wrap reveal">
+          <div class="contact">
+            <div class="contact__intents">
+              <label class="intent">
+                <input type="radio" name="intent" value="advisory" checked />
+                <span>
+                  <span class="intent__title">I am seeking advisory</span>
+                  <span class="intent__desc">M&amp;A, capital raising, or corporate finance counsel.</span>
+                </span>
+              </label>
+              <label class="intent">
+                <input type="radio" name="intent" value="investor" />
+                <span>
+                  <span class="intent__title">I am an investor</span>
+                  <span class="intent__desc">Request a current opportunity brief under NDA.</span>
+                </span>
+              </label>
             </div>
+            <form class="form" onsubmit="event.preventDefault(); alert('This is a design concept. Form is not wired.');">
+              <div class="form__row">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" required />
+                </div>
+                <div class="field">
+                  <label for="org">Organisation</label>
+                  <input id="org" type="text" />
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" required />
+                </div>
+                <div class="field">
+                  <label for="jurisdiction">Jurisdiction</label>
+                  <select id="jurisdiction" style="background: transparent;">
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>United Arab Emirates</option>
+                    <option>Switzerland</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <button class="btn" type="submit">
+                  Send privately
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -517,7 +521,7 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" style="height: 26px; filter: invert(0.92);" />
+          <img class="mark" src="./assets/logo/cotswold-mark.svg" alt="" style="height: 26px;" />
           <div class="footer__brand-name">Cotswold Capital</div>
           <p class="footer__tag">A boutique investment bank. Corporate finance, M&amp;A, and bespoke capital — under one institutional banner.</p>
         </div>
@@ -548,7 +552,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© Cotswold Capital · MMXXVI</span>
+        <span>© Cotswold Capital · 2026</span>
         <span>Discretion as a deliverable</span>
       </div>
     </div>
