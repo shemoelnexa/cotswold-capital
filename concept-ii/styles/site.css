@@ -124,6 +124,12 @@
 
 .nav__brand .mark { height: 26px; width: auto; }
 
+.nav__brand .brand-logo {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
 .nav__brand .wordmark {
   font-family: var(--font-display);
   font-weight: 600;
@@ -964,6 +970,12 @@
 }
 
 @media (min-width: 880px) { .footer__top { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+
+.footer__brand .brand-logo {
+  display: block;
+  height: 42px;
+  width: auto;
+}
 
 .footer__brand-name {
   font-family: var(--font-display);

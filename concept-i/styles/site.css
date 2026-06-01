@@ -111,6 +111,12 @@
 
 .nav__brand .mark { height: 26px; width: auto; }
 
+.nav__brand .brand-logo {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
 .nav__brand .wordmark {
   font-family: var(--font-display);
   font-weight: 500;
@@ -750,6 +756,12 @@
 }
 
 .footer__brand .mark { height: 26px; width: auto; }
+.footer__brand .brand-logo {
+  display: block;
+  height: 42px;
+  width: auto;
+  margin-bottom: var(--s-3);
+}
 .footer__brand-name {
   font-family: var(--font-display);
   font-weight: 500;

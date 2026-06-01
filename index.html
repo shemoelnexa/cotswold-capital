@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cotswold Capital — Concept switcher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     * { margin: 0; }
@@ -37,6 +37,7 @@
       grid-template-columns: 1fr;
     }
     @media (min-width: 880px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1320px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     .card {
       display: grid;
       gap: 16px;
@@ -62,6 +63,11 @@
       border-color: #2A3147;
     }
     .card--v:hover { border-color: #4D7AAE; }
+    .card--vi {
+      background: #FFFFFF;
+      border-color: #E8E1D5;
+    }
+    .card--vi:hover { border-color: #B6896B; }
     .num {
       font-size: 12px;
       letter-spacing: 0.18em;
@@ -71,6 +77,9 @@
     }
     .card--iv .num { color: #8A4F44; }
     .card--v .num  { color: #6F9DCF; }
+    .card--vi .num { color: #B6896B; }
+    .card--vi .title { font-family: "EB Garamond", Georgia, serif; font-weight: 400; }
+    .card--vi .title em { font-style: italic; }
     .title {
       font-size: clamp(1.5rem, 2.2vw, 2rem);
       font-weight: 600;
@@ -122,8 +131,8 @@
 <body>
   <div class="wrap">
     <p class="num" style="color:#8A8378; margin-bottom: 12px;">Cotswold Capital · Design concepts</p>
-    <h1>Two directions to evaluate.</h1>
-    <p class="sub">Both concepts deliver the same brief content with different aesthetic vocabularies. Open each and tell us which you'd like to refine.</p>
+    <h1>Three directions to evaluate.</h1>
+    <p class="sub">Each concept delivers the same brief content with a different aesthetic vocabulary. Open each and tell us which you'd like to refine.</p>
 
     <div class="grid">
 
@@ -145,10 +154,10 @@
       <a class="card card--v" href="./concept-ii/index.html">
         <span class="num">Concept II</span>
         <h2 class="title">Bespoke capital, in structure.</h2>
-        <p class="desc">Hark-inspired off-white surface, navy + blue palette, big numbered sections, 3D rotating cube hero, modular cards, and structured transaction grids.</p>
+        <p class="desc">Light off-white surface with navy + blue palette, big numbered sections, modular cards, and structured transaction grids.</p>
         <div class="tags">
           <span class="tag">Navy &amp; blue</span>
-          <span class="tag">3D rotating cube</span>
+          <span class="tag">Photo-led</span>
           <span class="tag">Card-based layout</span>
         </div>
         <span class="open">
@@ -157,9 +166,24 @@
         </span>
       </a>
 
+      <a class="card card--vi" href="./concept-iii/index.html">
+        <span class="num">Concept III</span>
+        <h2 class="title">Quiet conviction, <em>in serif.</em></h2>
+        <p class="desc">Apple-restraint, white surfaces only, serif headlines, rose-gold accent and a single blue hairline. Seven pages, multi-entity disclosure. Built directly from the sitemap.</p>
+        <div class="tags">
+          <span class="tag">Rose gold &amp; ink</span>
+          <span class="tag">Serif typography</span>
+          <span class="tag">7 pages · Sitemap v1</span>
+        </div>
+        <span class="open">
+          Open Concept III
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+        </span>
+      </a>
+
     </div>
 
-    <p class="foot">Design concepts — Cotswold Capital · MMXXVI</p>
+    <p class="foot">Design concepts — Cotswold Capital · 2026</p>
   </div>
 </body>
 </html>
