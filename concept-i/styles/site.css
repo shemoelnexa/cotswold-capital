@@ -1068,8 +1068,8 @@ body[data-cursor="custom"] .cursor-ring[data-state="view"] {
   width: 88px;
   height: 88px;
   margin: -44px 0 0 -44px;
-  border: 1px solid #ffd9c8;
-  background: color-mix(in oklab, #ffd9c8 12%, transparent);
+  border: 1px solid #CCB3A4;
+  background: color-mix(in oklab, #CCB3A4 12%, transparent);
   opacity: 1;
 }
 

@@ -4,24 +4,30 @@
    ============================================================ */
 
 :root {
+  /* ============================================================
+     CLIENT PALETTE ONLY — white #FFFFFF, navy #1C252E (the "blue"),
+     rose gold #CCB3A4 (logo + sparing accent). Secondary text and
+     lines are navy at reduced opacity; no other hues are used.
+     ============================================================ */
+
   /* ---- Surface ---- */
-  --surface:        oklch(0.99 0.005 60);
-  --surface-2:      oklch(0.96 0.008 50);
-  --surface-3:      oklch(0.94 0.010 50);
+  --surface:        #FFFFFF;
+  --surface-2:      rgba(28,37,46,0.03); /* faint navy wash over white */
+  --surface-3:      rgba(28,37,46,0.06);
 
   /* ---- Ink ---- */
-  --ink:            oklch(0.18 0.012 60);
-  --ink-2:          oklch(0.42 0.010 60);
-  --ink-3:          oklch(0.62 0.008 60);
-  --ink-inv:        oklch(0.99 0.005 60);
+  --ink:            #1C252E;            /* navy — primary text */
+  --ink-2:          rgba(28,37,46,0.72);
+  --ink-3:          rgba(28,37,46,0.55);
+  --ink-inv:        #FFFFFF;
 
   /* ---- Lines ---- */
-  --rule:           oklch(0.92 0.008 60);
-  --rule-strong:    oklch(0.82 0.010 50);
+  --rule:           rgba(28,37,46,0.12);
+  --rule-strong:    rgba(28,37,46,0.24);
 
   /* ---- Accents (used sparingly) ---- */
-  --rose:           oklch(0.66 0.075 35);
-  --blue:           oklch(0.36 0.075 245);
+  --rose:           #CCB3A4;            /* rose gold */
+  --blue:           #1C252E;            /* navy is the only blue */
 
   /* ---- Type ---- */
   --font-display:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -76,20 +82,20 @@
   --r-2:            6px;
 
   /* ---- Shadows (whisper only) ---- */
-  --shadow-1:       0 1px 2px oklch(0.18 0.012 60 / 0.04),
-                    0 2px 8px oklch(0.18 0.012 60 / 0.04);
-  --shadow-2:       0 8px 30px oklch(0.18 0.012 60 / 0.10),
-                    0 2px 6px oklch(0.18 0.012 60 / 0.06);
+  --shadow-1:       0 1px 2px rgba(28,37,46,0.04),
+                    0 2px 8px rgba(28,37,46,0.04);
+  --shadow-2:       0 8px 30px rgba(28,37,46,0.10),
+                    0 2px 6px rgba(28,37,46,0.06);
 
   /* ---- Cursor ---- */
   --cursor-dot:     6px;
   --cursor-ring:    34px;
 
-  /* ---- Dark surface (Concept IV) ---- */
-  --ink-dark:       oklch(0.16 0.014 60);
-  --ink-dark-2:     oklch(0.21 0.013 55);
-  --on-dark:        oklch(0.96 0.005 60);
-  --on-dark-2:      oklch(0.74 0.008 55);
-  --on-dark-3:      oklch(0.52 0.008 55);
-  --rule-dark:      oklch(0.32 0.014 55);
+  /* ---- Dark surface (navy) ---- */
+  --ink-dark:       #1C252E;            /* navy */
+  --ink-dark-2:     #283039;            /* lighter navy, same hue, for layering */
+  --on-dark:        #FFFFFF;
+  --on-dark-2:      rgba(255,255,255,0.74);
+  --on-dark-3:      rgba(255,255,255,0.52);
+  --rule-dark:      rgba(255,255,255,0.16);
 }

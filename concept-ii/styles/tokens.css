@@ -4,32 +4,40 @@
    ============================================================ */
 
 :root {
+  /* ============================================================
+     CLIENT PALETTE ONLY — white #FFFFFF, navy #1C252E (the "blue"),
+     rose gold #CCB3A4 (logo + sparing accent). Navy is the workhorse
+     "blue that brings things to life"; secondary text and lines are
+     navy at reduced opacity. No other hues are used.
+     ============================================================ */
+
   /* ---- Surfaces ---- */
-  --surface:        oklch(0.97 0.004 80);
-  --surface-2:      oklch(0.94 0.006 240);
-  --surface-3:      oklch(0.90 0.008 240);
-  --ink:            oklch(0.18 0.012 250);
-  --ink-2:          oklch(0.42 0.020 245);
-  --ink-3:          oklch(0.62 0.018 240);
-  --ink-inv:        oklch(0.97 0.004 80);
+  --surface:        #FFFFFF;
+  --surface-2:      rgba(28,37,46,0.03); /* faint navy wash over white */
+  --surface-3:      rgba(28,37,46,0.06);
+  --ink:            #1C252E;            /* navy — primary text */
+  --ink-2:          rgba(28,37,46,0.72);
+  --ink-3:          rgba(28,37,46,0.55);
+  --ink-inv:        #FFFFFF;
 
-  --rule:           oklch(0.90 0.010 240);
-  --rule-strong:    oklch(0.78 0.014 240);
+  --rule:           rgba(28,37,46,0.12);
+  --rule-strong:    rgba(28,37,46,0.24);
 
-  /* ---- Brand (navy + blue, no rose gold this time) ---- */
-  --navy:           oklch(0.28 0.065 250);
-  --navy-deep:      oklch(0.22 0.060 252);
-  --blue:           oklch(0.42 0.110 245);
-  --blue-bright:    oklch(0.55 0.135 240);
-  --blue-wash:      oklch(0.94 0.025 245);
+  /* ---- Brand (navy "blue" + rose gold) ---- */
+  --navy:           #1C252E;
+  --navy-deep:      #141C23;            /* deeper navy, same hue */
+  --blue:           #1C252E;            /* navy is the only blue */
+  --blue-bright:    #2E3D4C;            /* lighter navy, same hue */
+  --blue-wash:      rgba(28,37,46,0.06);
+  --rose:           #CCB3A4;            /* rose gold — logo + sparing accent */
 
   /* ---- Dark surface for accent sections ---- */
-  --ink-dark:       oklch(0.16 0.022 250);
-  --ink-dark-2:     oklch(0.22 0.024 248);
-  --on-dark:        oklch(0.96 0.005 80);
-  --on-dark-2:      oklch(0.74 0.018 245);
-  --on-dark-3:      oklch(0.52 0.020 245);
-  --rule-dark:      oklch(0.32 0.024 245);
+  --ink-dark:       #1C252E;            /* navy */
+  --ink-dark-2:     #283039;            /* lighter navy, same hue */
+  --on-dark:        #FFFFFF;
+  --on-dark-2:      rgba(255,255,255,0.74);
+  --on-dark-3:      rgba(255,255,255,0.52);
+  --rule-dark:      rgba(255,255,255,0.16);
 
   /* ---- Type ---- */
   --font-display:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -75,10 +83,10 @@
   --r-3:            16px;
 
   /* ---- Shadows ---- */
-  --shadow-1:       0 1px 2px oklch(0.18 0.020 250 / 0.05),
-                    0 2px 10px oklch(0.18 0.020 250 / 0.05);
-  --shadow-2:       0 8px 30px oklch(0.18 0.022 250 / 0.10),
-                    0 2px 6px oklch(0.18 0.022 250 / 0.06);
+  --shadow-1:       0 1px 2px rgba(28,37,46,0.05),
+                    0 2px 10px rgba(28,37,46,0.05);
+  --shadow-2:       0 8px 30px rgba(28,37,46,0.10),
+                    0 2px 6px rgba(28,37,46,0.06);
 
   --cursor-dot:     6px;
   --cursor-ring:    34px;

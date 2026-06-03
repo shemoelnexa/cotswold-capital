@@ -84,9 +84,9 @@
   inset: 0;
   z-index: -1;
   background: linear-gradient(180deg,
-    rgba(10,10,10,0.18) 0%,
-    rgba(10,10,10,0.06) 40%,
-    rgba(10,10,10,0.42) 100%);
+    rgba(28,37,46,0.18) 0%,
+    rgba(28,37,46,0.06) 40%,
+    rgba(28,37,46,0.42) 100%);
 }
 .hero__content {
   width: 100%;
@@ -115,11 +115,12 @@
 }
 .hero__sub {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 500;
   font-size: var(--t-hero-sub);
   color: #fff;
   letter-spacing: var(--ls-tight);
-  max-width: 22ch;
+  line-height: 1.45;
+  max-width: 46ch;
 }
 .hero__cta { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
 
@@ -310,7 +311,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10,10,10,0.50), rgba(10,10,10,0.05) 65%);
+  background: linear-gradient(90deg, rgba(28,37,46,0.50), rgba(28,37,46,0.05) 65%);
   opacity: 0;
   transition: opacity var(--d-base) var(--ease-out);
   pointer-events: none;
@@ -331,7 +332,7 @@
   font-weight: 500;
   font-size: 1.0625rem;
   letter-spacing: var(--ls-tight);
-  text-shadow: 0 1px 14px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 14px rgba(28,37,46,0.5);
   opacity: 0;
   transition: opacity var(--d-base) var(--ease-out), transform var(--d-base) var(--ease-out);
 }
@@ -379,7 +380,7 @@
 .billboard__img::after { content: ""; }
 .billboard__scrim {
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(10,10,10,0.55), rgba(10,10,10,0.25) 60%, rgba(10,10,10,0.45));
+  background: linear-gradient(90deg, rgba(28,37,46,0.55), rgba(28,37,46,0.25) 60%, rgba(28,37,46,0.45));
 }
 .billboard__inner {
   position: relative;
@@ -442,7 +443,7 @@
 .statement__cta { margin-top: clamp(32px, 4vw, 56px); display: inline-flex; }
 
 /* ============================================================
-   FOOTER  (Figma: Group 99 — #0a0a0a, 405px)
+   FOOTER  (navy #1C252E surface, 405px)
    ============================================================ */
 .footer {
   background: var(--ink-surface);
@@ -472,13 +473,13 @@
   flex: 1;
   height: 51px;
   padding: 0 14px;
-  background: rgba(53,53,53,0.25);
+  background: rgba(255,255,255,0.08);
   border: 1px solid var(--rose-soft);
   border-right: none;
   color: #fff;
   font-size: var(--t-foot);
 }
-.footer__form input::placeholder { color: rgba(226,225,225,0.5); }
+.footer__form input::placeholder { color: rgba(255,255,255,0.5); }
 .footer__form button {
   height: 51px;
   padding: 0 22px;

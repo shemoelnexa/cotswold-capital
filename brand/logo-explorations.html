@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotswolds Capital — Wordmark Explorations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant:wght@400;500;600&family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1C252E;
+    --navy-deep:#08222F;
+    --rose:#CCB3A4;
+    --rose-ink:#B7967F;
+    --ink:#1C252E;
+    --grey:#6B7177;
+    --line:#E7E4E1;
+    --paper:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#FAF9F8;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:64px 32px 120px}
+
+  header.intro{border-bottom:1px solid var(--line);padding-bottom:40px;margin-bottom:56px}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-ink);font-weight:500}
+  h1{font-family:'Cormorant',serif;font-weight:500;font-size:46px;line-height:1.1;margin:14px 0 18px}
+  .lede{color:var(--grey);max-width:640px;font-size:16px}
+  .meta{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap}
+  .meta .chip{font-size:13px;color:var(--grey)}
+  .meta .chip b{color:var(--ink);font-weight:500}
+  .sw{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:6px;border:1px solid rgba(0,0,0,.12)}
+
+  section.dir{margin-bottom:72px}
+  .dir-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:28px}
+  .dir-head h2{font-family:'Cormorant',serif;font-weight:500;font-size:26px}
+  .dir-head .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+  .dir-note{color:var(--grey);font-size:14px;max-width:680px;margin:-14px 0 26px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .panel{border-radius:14px;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:300px;position:relative}
+  .panel .label{position:absolute;top:14px;left:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-weight:500}
+  .panel.on-white{background:var(--paper)}
+  .panel.on-navy{background:var(--navy);border-color:var(--navy)}
+  .panel.on-navy .label{color:rgba(204,179,164,.7)}
+
+  /* Lockup */
+  .lockup{display:flex;flex-direction:column;align-items:center;gap:20px;padding:40px}
+  .lockup img.mark{height:120px;width:auto;display:block}
+  .lockup.row{flex-direction:row;gap:22px;padding:30px 40px}
+  .lockup.row img.mark{height:64px}
+
+  .wordmark{text-align:center}
+  .wordmark .top{display:block}
+  .wordmark .bot{display:block}
+
+  /* Direction A — Engraved Roman caps (Cinzel) */
+  .wm-cinzel{font-family:'Cinzel',serif;font-weight:500;letter-spacing:.14em;line-height:1.18}
+  .wm-cinzel.lg .top{font-size:30px}
+  .wm-cinzel.lg .bot{font-size:30px}
+  .wm-cinzel.sm{font-size:18px;letter-spacing:.18em}
+
+  /* Direction B — High-contrast serif (Cormorant) */
+  .wm-cormorant{font-family:'Cormorant',serif;font-weight:500;letter-spacing:.06em;line-height:1.1}
+  .wm-cormorant.lg .top{font-size:46px}
+  .wm-cormorant.lg .bot{font-size:46px}
+  .wm-cormorant.sm{font-size:30px}
+
+  /* Direction C — Thin-stroke sans (Jost) */
+  .wm-jost{font-family:'Jost',sans-serif;font-weight:300;letter-spacing:.34em;line-height:1.5}
+  .wm-jost.lg .top{font-size:24px}
+  .wm-jost.lg .bot{font-size:24px;letter-spacing:.5em}
+  .wm-jost.sm{font-size:15px;letter-spacing:.34em}
+
+  .on-white .wordmark{color:var(--ink)}
+  .on-white .wordmark.rose{color:var(--rose-ink)}
+  .on-navy .wordmark{color:var(--rose)}
+
+  /* favicon strip */
+  .fav-row{display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:26px}
+  .fav{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .fav .box{border:1px solid var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;background:#fff}
+  .fav .box.navy{background:var(--navy);border-color:var(--navy)}
+  .fav .box.b64{width:64px;height:64px}
+  .fav .box.b40{width:40px;height:40px}
+  .fav .box.b24{width:24px;height:24px}
+  .fav .box img{width:72%;height:72%;object-fit:contain}
+  .fav span{font-size:11px;color:var(--grey)}
+
+  .rec{background:#fff;border:1px solid var(--line);border-left:3px solid var(--rose);border-radius:12px;padding:20px 24px;margin-top:14px;font-size:14px;color:var(--grey)}
+  .rec b{color:var(--ink);font-weight:600}
+  footer{margin-top:80px;border-top:1px solid var(--line);padding-top:28px;color:var(--grey);font-size:13px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="intro">
+    <div class="eyebrow">Cotswolds Capital · Brand</div>
+    <h1>Wordmark explorations for the stag</h1>
+    <div class="meta">
+      <span class="chip"><span class="sw" style="background:#fff"></span><b>White</b> #FFFFFF · base</span>
+      <span class="chip"><span class="sw" style="background:#CCB3A4"></span><b>Rose gold</b> #CCB3A4 · logo</span>
+      <span class="chip"><span class="sw" style="background:#1C252E"></span><b>Navy</b> #1C252E · the blue</span>
+    </div>
+  </header>
+
+  <!-- DIRECTION A -->
+  <section class="dir">
+    <div class="dir-head"><h2>Direction A — Engraved Roman capitals</h2><span class="tag">Heritage · prestige</span></div>
+    <p class="dir-note">Cinzel — classical inscriptional capitals with subtle stroke modulation. Reads as heritage,
+    establishment and prestige; the formal, crest-like feel rhymes most closely with the stag’s symmetry.</p>
+    <div class="grid">
+      <div class="panel on-white">
+        <span class="label">Rose gold on white · primary</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark rose wm-cinzel lg"><span class="top">COTSWOLDS</span><span class="bot">CAPITAL</span></div>
+        </div>
+      </div>
+      <div class="panel on-navy">
+        <span class="label">Reversed on navy</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark wm-cinzel lg"><span class="top">COTSWOLDS</span><span class="bot">CAPITAL</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:24px">
+      <div class="panel on-white">
+        <span class="label">Header lockup · ink</span>
+        <div class="lockup row">
+          <img class="mark" src="logo/stag-navy-trim.png" alt="stag">
+          <div class="wordmark wm-cinzel sm"><span class="top">COTSWOLDS</span><span class="bot">CAPITAL</span></div>
+        </div>
+      </div>
+      <div class="panel on-white" style="min-height:auto;padding:26px">
+        <span class="label">Favicon / app icon</span>
+        <div class="fav-row" style="margin-top:10px">
+          <div class="fav"><div class="box b64"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+          <div class="fav"><div class="box b40"><img src="logo/stag-rose-trim.png"></div><span>40</span></div>
+          <div class="fav"><div class="box b24"><img src="logo/stag-navy-trim.png"></div><span>24</span></div>
+          <div class="fav"><div class="box b64 navy"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION B -->
+  <section class="dir">
+    <div class="dir-head"><h2>Direction B — Fine high-contrast serif</h2><span class="tag">Editorial · luxury</span></div>
+    <p class="dir-note">Cormorant — a Garamond-rooted display serif with hairline thins that echo the logo’s fine,
+    even linework. Softer and more editorial than Direction A; pairs beautifully with a white, magazine-like layout.</p>
+    <div class="grid">
+      <div class="panel on-white">
+        <span class="label">Rose gold on white · primary</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark rose wm-cormorant lg"><span class="top">Cotswolds</span><span class="bot">Capital</span></div>
+        </div>
+      </div>
+      <div class="panel on-navy">
+        <span class="label">Reversed on navy</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark wm-cormorant lg"><span class="top">Cotswolds</span><span class="bot">Capital</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:24px">
+      <div class="panel on-white">
+        <span class="label">Header lockup · ink</span>
+        <div class="lockup row">
+          <img class="mark" src="logo/stag-navy-trim.png" alt="stag">
+          <div class="wordmark wm-cormorant sm"><span class="top" style="display:inline">Cotswolds Capital</span></div>
+        </div>
+      </div>
+      <div class="panel on-white" style="min-height:auto;padding:26px">
+        <span class="label">Favicon / app icon</span>
+        <div class="fav-row" style="margin-top:10px">
+          <div class="fav"><div class="box b64"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+          <div class="fav"><div class="box b40"><img src="logo/stag-rose-trim.png"></div><span>40</span></div>
+          <div class="fav"><div class="box b24"><img src="logo/stag-navy-trim.png"></div><span>24</span></div>
+          <div class="fav"><div class="box b64 navy"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION C -->
+  <section class="dir">
+    <div class="dir-head"><h2>Direction C — Refined thin-stroke sans</h2><span class="tag">Modern · minimal</span></div>
+    <p class="dir-note">Jost (light, wide-tracked) — a geometric sans whose uniform stroke weight matches the stag’s
+    single-line construction most literally. The most contemporary and restrained of the three; closest in spirit
+    to the current spaced-caps treatment, but properly considered.</p>
+    <div class="grid">
+      <div class="panel on-white">
+        <span class="label">Rose gold on white · primary</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark rose wm-jost lg"><span class="top">COTSWOLDS</span><span class="bot">CAPITAL</span></div>
+        </div>
+      </div>
+      <div class="panel on-navy">
+        <span class="label">Reversed on navy</span>
+        <div class="lockup">
+          <img class="mark" src="logo/stag-rose-trim.png" alt="stag">
+          <div class="wordmark wm-jost lg"><span class="top">COTSWOLDS</span><span class="bot">CAPITAL</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:24px">
+      <div class="panel on-white">
+        <span class="label">Header lockup · ink</span>
+        <div class="lockup row">
+          <img class="mark" src="logo/stag-navy-trim.png" alt="stag">
+          <div class="wordmark wm-jost sm"><span class="top" style="display:inline">COTSWOLDS&nbsp;&nbsp;CAPITAL</span></div>
+        </div>
+      </div>
+      <div class="panel on-white" style="min-height:auto;padding:26px">
+        <span class="label">Favicon / app icon</span>
+        <div class="fav-row" style="margin-top:10px">
+          <div class="fav"><div class="box b64"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+          <div class="fav"><div class="box b40"><img src="logo/stag-rose-trim.png"></div><span>40</span></div>
+          <div class="fav"><div class="box b24"><img src="logo/stag-navy-trim.png"></div><span>24</span></div>
+          <div class="fav"><div class="box b64 navy"><img src="logo/stag-rose-trim.png"></div><span>64</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

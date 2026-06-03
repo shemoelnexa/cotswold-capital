@@ -706,7 +706,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, oklch(0.16 0.022 250 / 0.78) 100%);
+  background: linear-gradient(180deg, transparent 40%, rgba(28,37,46,0.78) 100%);
 }
 
 .coverage-card__body {
@@ -1072,7 +1072,7 @@ body[data-cursor="custom"] .cursor-ring { opacity: 1; }
   width: calc(var(--cursor-ring) * 1.5);
   height: calc(var(--cursor-ring) * 1.5);
   margin: calc(var(--cursor-ring) * -0.75) 0 0 calc(var(--cursor-ring) * -0.75);
-  border-color: #b0d4ff;
+  border-color: #CCB3A4;
 }
 
 @media (hover: none) { .cursor-dot, .cursor-ring { display: none; } }

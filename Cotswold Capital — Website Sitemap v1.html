@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cotswold Capital — Website Sitemap v1</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#9354FF;--lavender:#E9DDFF;--dark:#12101A;--dark2:#1E1830;
+  --teal:#0D9488;--teal-lt:#CCFBF1;--orange:#EA580C;--orange-lt:#FED7AA;
+  --coral:#E11D48;--coral-lt:#FFE4E6;--green:#16A34A;--green-lt:#DCFCE7;
+  --slate:#475569;--slate-lt:#F1F5F9;
+  --text:#18141F;--text2:#5B5671;--text3:#9590AA;
+  --border:#E8E3F0;--bg:#F6F4FB;--white:#FFFFFF;
+  --r-sm:6px;--r-md:12px;--r-lg:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);line-height:1.55;font-size:14px}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;letter-spacing:-.01em}
+
+/* Cover */
+.cover{background:var(--dark);padding:52px 56px 44px;position:relative;overflow:hidden;color:#fff}
+.cover::after{content:"";position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(closest-side,rgba(147,84,255,.18),transparent 70%);pointer-events:none}
+.cover-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;position:relative;z-index:2}
+.cover-tags{display:flex;gap:8px;flex-wrap:wrap}
+.ctag{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.ctag-purple{background:rgba(147,84,255,.18);border:1px solid rgba(147,84,255,.35);color:#C4A4FF}
+.ctag-gray{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.45)}
+.ctag-teal{background:rgba(13,148,136,.18);border:1px solid rgba(13,148,136,.35);color:#5EEAD4}
+.brandlogo{font-family:'DM Serif Display',serif;font-size:20px;letter-spacing:.15em;color:#fff}
+.brandlogo em{color:#C4A4FF;font-style:italic;font-weight:400}
+.cover h1{font-size:46px;line-height:1.05;color:#fff;margin-bottom:14px;position:relative;z-index:2;max-width:780px}
+.cover h1 em{color:#C4A4FF;font-style:italic}
+.cover-sub{font-size:14px;color:rgba(255,255,255,.62);max-width:680px;margin-bottom:30px;position:relative;z-index:2}
+.cstats{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;position:relative;z-index:2}
+.cstat{display:flex;flex-direction:column;gap:3px}
+.cstat-n{font-family:'DM Serif Display',serif;font-size:30px;color:#fff;line-height:1}
+.cstat-l{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.refs{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:2}
+.refpill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.72);padding:5px 12px;border-radius:999px;font-size:11.5px}
+.refpill strong{color:#C4A4FF;font-weight:600}
+
+/* Legend */
+.legend{background:var(--white);border-bottom:1px solid var(--border);padding:14px 56px;display:flex;flex-wrap:wrap;gap:20px}
+.leg{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--text2)}
+.legdot{width:9px;height:9px;border-radius:50%}
+
+/* Main */
+.main{max-width:1060px;margin:0 auto;padding:38px 28px 56px}
+
+/* Summary tiles */
+.summary{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;background:var(--white);border-radius:var(--r-lg);border:1.5px solid var(--border);padding:22px 24px;margin-bottom:36px}
+.sum-item{text-align:center}
+.sum-num{font-family:'DM Serif Display',serif;font-size:30px;line-height:1;margin-bottom:6px}
+.sum-lbl{font-size:11px;color:var(--text2);letter-spacing:.04em;line-height:1.35}
+.sum-purple .sum-num{color:var(--purple)}
+.sum-teal .sum-num{color:var(--teal)}
+.sum-orange .sum-num{color:var(--orange)}
+.sum-coral .sum-num{color:var(--coral)}
+.sum-green .sum-num{color:var(--green)}
+.sum-slate .sum-num{color:var(--slate)}
+
+/* Global nav */
+.gnav{background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px 26px;margin-bottom:28px}
+.gnav-title{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:12px}
+.gnav-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.npill{padding:6px 13px;border-radius:999px;font-size:12px;font-weight:500}
+.npill-main{background:var(--lavender);color:var(--purple)}
+.npill-cta{background:var(--purple);color:#fff}
+.npill-city{background:var(--teal-lt);color:var(--teal)}
+.npill-global{background:var(--bg);color:var(--text2);border:1px solid var(--border)}
+.mega-note{background:rgba(147,84,255,.06);border:1px solid rgba(147,84,255,.15);border-radius:var(--r-sm);padding:9px 14px;font-size:12px;color:var(--text2);margin-top:8px}
+
+/* Section group */
+.sg{margin-bottom:44px}
+.sg-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sg-dot{width:11px;height:11px;border-radius:50%}
+.sg-name{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.sg-line{flex:1;height:1px;background:var(--border)}
+
+/* Page card */
+.pc{background:var(--white);border-radius:var(--r-lg);border:1.5px solid var(--border);overflow:hidden;margin-bottom:14px}
+.pc-head{padding:20px 26px 16px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.pc-head-l{flex:1;min-width:0}
+.pc-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.badge-type{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.badge-new{background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.badge-upd{background:#DBEAFE;color:#1E40AF;border:1px solid #BFDBFE;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.badge-seo{background:#D1FAE5;color:#065F46;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.badge-key{background:rgba(147,84,255,.1);color:var(--purple);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+.pc-title{font-family:'DM Serif Display',serif;font-size:22px;line-height:1.15;margin-bottom:7px}
+.pc-url{display:inline-block;font-family:'SFMono-Regular',Menlo,monospace;font-size:11.5px;color:var(--text3);background:var(--bg);padding:3px 9px;border-radius:5px;margin-bottom:11px}
+.pc-desc{font-size:13px;color:var(--text2);line-height:1.6;max-width:680px}
+.pc-meta{display:flex;flex-direction:column;gap:6px;align-items:flex-end;flex-shrink:0}
+.meta-pill{font-size:11px;padding:4px 10px;border-radius:5px;font-weight:500;white-space:nowrap}
+
+/* Sections grid */
+.sg-grid{padding:20px 26px 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:11px}
+.si{background:var(--bg);border-radius:10px;padding:13px 15px;border-left:3px solid}
+.si-title{font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:6px;color:var(--text)}
+.si-icon{width:20px;height:20px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.si-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.si-note{display:inline-block;margin-top:7px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:#FEF3C7;color:#92400E}
+.si-note.seo{background:#D1FAE5;color:#065F46}
+.si-note.client{background:#DBEAFE;color:#1E40AF}
+
+/* Children bar */
+.children{border-top:1px solid var(--border);padding:14px 26px 18px;background:rgba(0,0,0,.018)}
+.children-title{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:8px}
+.child-pills{display:flex;flex-wrap:wrap;gap:6px}
+.child-pill{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:5px 10px;font-family:'SFMono-Regular',Menlo,monospace;font-size:11.5px;color:var(--text2)}
+
+/* Connector */
+.conn{text-align:center;color:var(--text3);font-size:20px;line-height:1;margin:6px 0}
+
+/* Footer card */
+.footer-card{background:var(--dark);border-radius:var(--r-lg);padding:28px 32px;margin-top:28px;color:#fff}
+.footer-card h3{color:#fff;font-size:18px;margin-bottom:14px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-top:6px}
+.fi{background:rgba(255,255,255,.05);border-radius:8px;padding:12px 14px}
+.fi strong{color:#C4A4FF;display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;font-weight:700}
+.fi span{font-size:12px;color:rgba(255,255,255,.78);line-height:1.55}
+
+/* Dev notes */
+.devnotes{margin-top:20px;background:#F0FDF4;border:1.5px solid #86EFAC;border-radius:var(--r-lg);padding:20px 26px}
+.devnotes-title{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#15803D;margin-bottom:14px}
+.devnotes-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dn{font-size:12.5px;color:#166534;line-height:1.6}
+.dn strong{display:block;font-weight:700;color:#14532D;margin-bottom:3px;font-size:12.5px}
+
+/* Credit */
+.credit{margin-top:28px;text-align:center;color:var(--text3);font-size:11.5px}
+.credit strong{color:var(--purple)}
+
+/* Theme classes */
+.t-purple .pc-head{border-left:4px solid var(--purple)}
+.t-purple .si{border-left-color:var(--purple)}
+.t-purple .si-icon{background:var(--lavender);color:var(--purple)}
+.t-purple .meta-pill{background:var(--lavender);color:var(--purple)}
+.t-purple .badge-type{background:var(--lavender);color:var(--purple)}
+
+.t-teal .pc-head{border-left:4px solid var(--teal)}
+.t-teal .si{border-left-color:var(--teal)}
+.t-teal .si-icon{background:var(--teal-lt);color:var(--teal)}
+.t-teal .meta-pill{background:var(--teal-lt);color:var(--teal)}
+.t-teal .badge-type{background:var(--teal-lt);color:var(--teal)}
+
+.t-coral .pc-head{border-left:4px solid var(--coral)}
+.t-coral .si{border-left-color:var(--coral)}
+.t-coral .si-icon{background:var(--coral-lt);color:var(--coral)}
+.t-coral .meta-pill{background:var(--coral-lt);color:var(--coral)}
+.t-coral .badge-type{background:var(--coral-lt);color:var(--coral)}
+
+.t-orange .pc-head{border-left:4px solid var(--orange)}
+.t-orange .si{border-left-color:var(--orange)}
+.t-orange .si-icon{background:var(--orange-lt);color:var(--orange)}
+.t-orange .meta-pill{background:var(--orange-lt);color:var(--orange)}
+.t-orange .badge-type{background:var(--orange-lt);color:var(--orange)}
+
+.t-green .pc-head{border-left:4px solid var(--green)}
+.t-green .si{border-left-color:var(--green)}
+.t-green .si-icon{background:var(--green-lt);color:var(--green)}
+.t-green .meta-pill{background:var(--green-lt);color:var(--green)}
+.t-green .badge-type{background:var(--green-lt);color:var(--green)}
+
+.t-slate .pc-head{border-left:4px solid var(--slate)}
+.t-slate .si{border-left-color:var(--slate)}
+.t-slate .si-icon{background:var(--slate-lt);color:var(--slate)}
+.t-slate .meta-pill{background:var(--slate-lt);color:var(--slate)}
+.t-slate .badge-type{background:var(--slate-lt);color:var(--slate)}
+
+@media print{
+  body{background:white !important}
+  .cover{background:#12101A !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .footer-card{background:#12101A !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .main{padding:30px 40px 60px}
+  .sg-grid{grid-template-columns:repeat(2,1fr)}
+  .summary{grid-template-columns:repeat(6,1fr)}
+  .pc{page-break-inside:avoid}
+  .sg{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<header class="cover">
+  <div class="cover-top">
+    <div class="cover-tags">
+      <span class="ctag ctag-purple">v1 · First Draft</span>
+      <span class="ctag ctag-teal">Client-Facing</span>
+      <span class="ctag ctag-gray">June 2026</span>
+    </div>
+    <div class="brandlogo">NEXA</div>
+  </div>
+  <h1>Cotswold Capital<br><em>Website Sitemap</em></h1>
+  <p class="cover-sub">A boutique global investment bank advising on corporate finance, M&amp;A, capital raising and investor introductions across the United Kingdom, the United Arab Emirates and the United States. This sitemap defines the proposed page structure, content sections and editorial scope for Phase 1 of the website rebuild on HubSpot.</p>
+  <div class="cstats">
+    <div class="cstat"><div class="cstat-n">8</div><div class="cstat-l">Core Templates</div></div>
+    <div class="cstat"><div class="cstat-n">6</div><div class="cstat-l">Opportunity Pages</div></div>
+    <div class="cstat"><div class="cstat-n">4</div><div class="cstat-l">Legal &amp; Utility</div></div>
+    <div class="cstat"><div class="cstat-n">3</div><div class="cstat-l">Jurisdictions</div></div>
+    <div class="cstat"><div class="cstat-n">1</div><div class="cstat-l">Phase</div></div>
+  </div>
+  <div class="refs">
+    <span class="refpill"><strong>Platform:</strong>&nbsp;HubSpot Content Hub (Starter)</span>
+    <span class="refpill"><strong>Theme base:</strong>&nbsp;Human Magic (restyled)</span>
+    <span class="refpill"><strong>Design ref:</strong>&nbsp;Apple-style minimalism</span>
+    <span class="refpill"><strong>Brand:</strong>&nbsp;White · Rose-gold · Blue accents</span>
+    <span class="refpill"><strong>Entities:</strong>&nbsp;UK · UAE · NY</span>
+  </div>
+</header>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="leg"><span class="legdot" style="background:#9354FF"></span> Homepage</div>
+  <div class="leg"><span class="legdot" style="background:#0D9488"></span> Primary Landing</div>
+  <div class="leg"><span class="legdot" style="background:#E11D48"></span> Detail / Product</div>
+  <div class="leg"><span class="legdot" style="background:#16A34A"></span> Support</div>
+  <div class="leg"><span class="legdot" style="background:#475569"></span> Legal &amp; Utility</div>
+</div>
+
+<main class="main">
+
+<!-- SUMMARY -->
+<div class="summary">
+  <div class="sum-item sum-purple"><div class="sum-num">1</div><div class="sum-lbl">Homepage</div></div>
+  <div class="sum-item sum-teal"><div class="sum-num">2</div><div class="sum-lbl">Primary Landing</div></div>
+  <div class="sum-item sum-coral"><div class="sum-num">6</div><div class="sum-lbl">Opportunity Details</div></div>
+  <div class="sum-item sum-green"><div class="sum-num">4</div><div class="sum-lbl">Support Pages</div></div>
+  <div class="sum-item sum-slate"><div class="sum-num">4</div><div class="sum-lbl">Legal &amp; Utility</div></div>
+  <div class="sum-item sum-purple"><div class="sum-num">17</div><div class="sum-lbl">Total Pages</div></div>
+</div>
+
+<!-- GLOBAL NAV -->
+<div class="gnav">
+  <div class="gnav-title">Global Navigation · Header</div>
+  <div class="gnav-row">
+    <span class="npill npill-main">Home</span>
+    <span class="npill npill-main">About</span>
+    <span class="npill npill-main">What We Do</span>
+    <span class="npill npill-main">Opportunities</span>
+    <span class="npill npill-main">Experience</span>
+    <span class="npill npill-main">Team</span>
+    <span class="npill npill-main">Contact</span>
+    <span class="npill npill-cta">Enquire</span>
+  </div>
+  <div class="mega-note">Single-level navigation. No mega menu. Mobile collapses to a minimal hamburger with the same flat list and a sticky Enquire button. Logo sits left, nav right, on a white background with hairline divider on scroll.</div>
+  <div class="gnav-title" style="margin-top:18px">Global Elements</div>
+  <div class="gnav-row">
+    <span class="npill npill-global">HubSpot tracking</span>
+    <span class="npill npill-global">HubSpot forms</span>
+    <span class="npill npill-global">Cookie consent (UK GDPR · UAE PDPL · US)</span>
+    <span class="npill npill-global">Light theme only</span>
+    <span class="npill npill-global">No animation on hero</span>
+    <span class="npill npill-global">Multi-entity disclosure</span>
+  </div>
+</div>
+
+<!-- HOMEPAGE -->
+<div class="sg">
+  <div class="sg-label"><span class="sg-dot" style="background:#9354FF"></span><span class="sg-name" style="color:#9354FF">Homepage</span><span class="sg-line"></span></div>
+  <div class="pc t-purple">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Homepage</span></div>
+        <div class="pc-title">Home</div>
+        <span class="pc-url">/</span>
+        <div class="pc-desc">First impression for HNW investors, advisory clients and partner advisors. Communicates Cotswold Capital&rsquo;s position as a boutique global investment bank in a calm, polished, Apple-minimalist layout. White background, restrained typography, rose-gold accent on the logo, single hairline blue detail. No 3D objects. No illustrated graphics. No carousel.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">7 sections</span>
+        <span class="meta-pill">1 of 1</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero Statement</div><div class="si-desc">Full-width section with the firm&rsquo;s positioning statement in serif type on white. Single understated call to action (&ldquo;Enquire&rdquo;). Logo top-left, no background imagery, no rotating slider.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>Who We Are</div><div class="si-desc">Three-line introduction to the firm: independent, network-led, multi-jurisdictional. Sets the tone before users explore services. Anchored link into the About page.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>What We Do Snapshot</div><div class="si-desc">Four restrained service tiles: Corporate Finance, Mergers &amp; Acquisitions, Capital Raising, Investor Introductions. Each tile links to its anchored section on the What We Do page.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Featured Opportunities</div><div class="si-desc">Three curated live opportunities chosen by Mark, surfaced as quiet cards with sector, scale and a one-line proposition. Each card routes to its full opportunity detail page.<span class="si-note client">Client editable · HubSpot</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Track Record Strip</div><div class="si-desc">A small set of credibility headline numbers (transactions advised, total deal value, years of experience). Plain typography, no charts.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">06</span>Global Presence</div><div class="si-desc">Three-column block presenting the United Kingdom, United Arab Emirates and United States offices. Each links to the corresponding office block on the Contact page.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">07</span>Closing Enquiry CTA</div><div class="si-desc">Final calm call to action with a single line of copy and the Enquire button. Routes to the contact form, captured into HubSpot.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="conn">&darr;</div>
+
+<!-- PRIMARY LANDING -->
+<div class="sg">
+  <div class="sg-label"><span class="sg-dot" style="background:#0D9488"></span><span class="sg-name" style="color:#0D9488">Primary Landing Pages</span><span class="sg-line"></span></div>
+
+  <div class="pc t-teal">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Primary Landing</span><span class="badge-seo">SEO</span></div>
+        <div class="pc-title">What We Do</div>
+        <span class="pc-url">/what-we-do</span>
+        <div class="pc-desc">Single comprehensive services page covering all advisory capabilities. Each service has its own anchored section so Mark can deep-link from LinkedIn, email or outreach directly into a specific service block. No separate sub-pages per service in Phase 1 to keep the site compact and Apple-clean.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">8 sections</span>
+        <span class="meta-pill">1 of 2</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">Single-line statement positioning the breadth of advisory services. White background, restrained.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>Corporate Finance Advisory</div><div class="si-desc">Strategic financial advice, capital structuring, board-level guidance for owner-managed and growth businesses. Anchored as <code>#corporate-finance</code>.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Mergers &amp; Acquisitions</div><div class="si-desc">Buy-side and sell-side advisory, MBOs, MBIs and disposals. Full advisory from mandate through completion. Anchored as <code>#m-and-a</code>.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Capital Raising</div><div class="si-desc">Equity, debt and structured raises for growth-stage and mature businesses. Anchored as <code>#capital-raising</code>.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Investor Introductions</div><div class="si-desc">Connecting qualified opportunities to Cotswold Capital&rsquo;s high net worth network and family office relationships. Anchored as <code>#investor-introductions</code>.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">06</span>The Advisor Network</div><div class="si-desc">Explains the distinctive operating model: a network of senior independent advisors operating under one banner, providing scale without overhead.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">07</span>How We Engage</div><div class="si-desc">Plain explanation of the engagement model and process. Discovery, mandate, execution, completion. Builds trust before the form fill.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">08</span>Enquiry Form</div><div class="si-desc">Embedded HubSpot form at the foot of the page with a service-type selector pre-populated by anchor link.<span class="si-note client">HubSpot CRM</span></div></div>
+    </div>
+  </div>
+
+  <div class="pc t-teal">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Primary Landing</span><span class="badge-new">New Structure</span></div>
+        <div class="pc-title">Opportunities</div>
+        <span class="pc-url">/opportunities</span>
+        <div class="pc-desc">Hub showcasing the live investment opportunities Cotswold Capital is currently advising on. Each opportunity has its own detail page (unlike the current site which presents them as cards only). Mark adds, edits and retires opportunities via HubSpot CMS without developer involvement.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">4 sections</span>
+        <span class="meta-pill">2 of 2</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">Calm positioning statement introducing live opportunities. No imagery noise.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>How To Engage</div><div class="si-desc">Short explanatory block on the engagement process for opportunities. Qualification, NDA, dataroom. Sets expectations for serious investors.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Live Opportunities Grid</div><div class="si-desc">Quiet card grid: project name, sector, scale, one-line proposition. Each card routes to a full detail page. Sorted by Mark in HubSpot.<span class="si-note client">Client editable · HubSpot</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Submit An Opportunity</div><div class="si-desc">Separate call to action for clients seeking advisory on their own opportunity. Distinct from the investor side of the form. Routes into HubSpot with a different tag.</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="conn">&darr;</div>
+
+<!-- DETAIL TEMPLATE -->
+<div class="sg">
+  <div class="sg-label"><span class="sg-dot" style="background:#E11D48"></span><span class="sg-name" style="color:#E11D48">Opportunity Detail Template</span><span class="sg-line"></span></div>
+  <div class="pc t-coral">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Detail / Product</span><span class="badge-new">New Pages</span><span class="badge-seo">SEO</span></div>
+        <div class="pc-title">Opportunity Detail (template)</div>
+        <span class="pc-url">/opportunities/[slug]</span>
+        <div class="pc-desc">One page per live opportunity. Designed for credibility and to route qualified enquiries. Editable end-to-end by Mark via HubSpot. Six initial instances based on the current site. Mark adds, edits and retires these pages over time. Each carries its own metadata for future SEO and LLM citation work (Phase 2).</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">8 sections</span>
+        <span class="meta-pill">Template · 6 live</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Project Hero</div><div class="si-desc">Project name, sector tag, scale (deal size or market opportunity), status tag (Live · Closed · Coming Soon). Single restrained line of positioning.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>The Opportunity</div><div class="si-desc">Plain-English overview of the project written for non-specialist investors. Two to four short paragraphs.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Market Context</div><div class="si-desc">Sizing, drivers, comparable transactions and the macro reason this opportunity exists now. Optional single understated chart or numeric callout.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Investment Thesis</div><div class="si-desc">Why this project, why now, and what edge Cotswold Capital sees. The credibility section.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Capital Sought &amp; Stage</div><div class="si-desc">What is being raised, the deal stage, and the structure (equity, debt, structured). Calibrated language for accredited investors.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">06</span>Our Role</div><div class="si-desc">Cotswold Capital&rsquo;s specific mandate on the opportunity. Clarifies the advisory position versus principal capital.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">07</span>Confidentiality Note &amp; Enquiry Form</div><div class="si-desc">Regulated language on suitability, NDA and accredited investor status, followed by the HubSpot enquiry form with project tag. <span class="si-note seo">Legal sign-off</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">08</span>Related Opportunities</div><div class="si-desc">Two or three quietly presented related projects at the foot of the page. Routes back into the Opportunities hub.</div></div>
+    </div>
+    <div class="children">
+      <div class="children-title">Initial Six Instances</div>
+      <div class="child-pills">
+        <span class="child-pill">/opportunities/project-vault</span>
+        <span class="child-pill">/opportunities/project-sustain</span>
+        <span class="child-pill">/opportunities/project-wave</span>
+        <span class="child-pill">/opportunities/project-midas</span>
+        <span class="child-pill">/opportunities/project-id</span>
+        <span class="child-pill">/opportunities/project-grail</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="conn">&darr;</div>
+
+<!-- SUPPORT PAGES -->
+<div class="sg">
+  <div class="sg-label"><span class="sg-dot" style="background:#16A34A"></span><span class="sg-name" style="color:#16A34A">Support Pages</span><span class="sg-line"></span></div>
+
+  <div class="pc t-green">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Support</span></div>
+        <div class="pc-title">About</div>
+        <span class="pc-url">/about</span>
+        <div class="pc-desc">Tells the story of Cotswold Capital as an independent boutique investment bank built on a network of senior advisors. Establishes trust and the multi-jurisdictional structure before users explore services. The page that turns a curious visitor into an enquiry-ready one.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">6 sections</span>
+        <span class="meta-pill">1 of 4</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">A single line establishing the firm&rsquo;s position. No tagline gymnastics.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>The Firm</div><div class="si-desc">Mark&rsquo;s short letter or firm philosophy. The voice of the principal, written by Mark.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Independent By Design</div><div class="si-desc">Explains the network operating model: senior advisors trading independence for credibility under one banner. The differentiator section.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Three Locations, One Standard</div><div class="si-desc">UK, UAE and US presence presented as three quiet columns. Reinforces that opportunities and investors flow across jurisdictions.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Our Values</div><div class="si-desc">Four short principles: Discretion, Credibility, Independence, Long-Term Thinking. Plain typography, no icons.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">06</span>Meet The Principals</div><div class="si-desc">Short bios for Mark Hardwicke and Huw Thomas with a single portrait each, leading into the Team page.</div></div>
+    </div>
+  </div>
+
+  <div class="pc t-green">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Support</span></div>
+        <div class="pc-title">Experience</div>
+        <span class="pc-url">/experience</span>
+        <div class="pc-desc">Track record of past transactions. Reinforces credibility by showing closed deals, sectors and scale. Carries forward the strongest content asset on the current site (the deal grid) with a more restrained visual treatment.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">5 sections</span>
+        <span class="meta-pill">2 of 4</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">Quiet statement on the firm&rsquo;s track record. No moving graphics.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>Headline Numbers</div><div class="si-desc">Total deal value advised, number of transactions, sectors served. Plain serif typography on white.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Transactions Grid</div><div class="si-desc">Existing 15 deals reformatted into a clean grid. Each entry: company, sector, deal type (Sale · Fundraise · Acquisition), deal value. Quiet category markers replace the current emoji-style symbols.<span class="si-note client">Client editable · HubSpot</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Sectors Served</div><div class="si-desc">Simple tag list of the sectors where the firm has executed. Reinforces breadth without claiming specialism in everything.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Closing CTA</div><div class="si-desc">Single Enquire button. No carousel, no slider, no testimonials in Phase 1.</div></div>
+    </div>
+  </div>
+
+  <div class="pc t-green">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Support</span></div>
+        <div class="pc-title">Team</div>
+        <span class="pc-url">/team</span>
+        <div class="pc-desc">Introduces the firm&rsquo;s named principals and the wider advisor network. Single professional portrait per principal, no group shots, no styled photography that competes with the content. Advisor network presented as a collective until individuals are comfortable to publish.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">5 sections</span>
+        <span class="meta-pill">3 of 4</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">A line on people-led advisory. Calm.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>The Principals</div><div class="si-desc">Two principal cards: Mark Hardwicke and Huw Thomas. Portrait, name, role, one-line credential.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Principal Bios</div><div class="si-desc">Long-form biography per principal. M&amp;A track record, sectors, notable transactions. Written by Mark, structured for LLM legibility (Phase 2 prep).</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>The Advisor Network</div><div class="si-desc">Explanation of the network model plus named advisors as they choose to be listed. Initial release: collective description only.<span class="si-note client">Client editable · HubSpot</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Become An Advisor</div><div class="si-desc">Quiet outreach block for senior independent advisors interested in joining the network. Separate HubSpot form tag.</div></div>
+    </div>
+  </div>
+
+  <div class="pc t-green">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Support</span></div>
+        <div class="pc-title">Contact</div>
+        <span class="pc-url">/contact</span>
+        <div class="pc-desc">Routing hub for every enquiry. The form captures intent (investor, client seeking advisory, opportunity submission, press, advisor enquiry, other) and feeds the right HubSpot pipeline. All correspondence flows through Mark&rsquo;s dedicated Cotswold Capital email channel only.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">5 sections</span>
+        <span class="meta-pill">4 of 4</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">01</span>Hero</div><div class="si-desc">A single line: &ldquo;Let&rsquo;s connect the dots.&rdquo; Quiet treatment.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">02</span>Enquiry Form</div><div class="si-desc">Fields: Name, Email (required), Phone, Country, Enquiry Type (dropdown: Investor · Client seeking advisory · Opportunity submission · Press · Advisor · Other), Message. HubSpot routing on submit.<span class="si-note client">HubSpot CRM</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">03</span>Three Offices</div><div class="si-desc">UK (HQ), UAE and US offices presented as three quiet columns. Address, jurisdiction note, dedicated enquiry email.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">04</span>Direct Channels</div><div class="si-desc">Single LinkedIn link and a single general email address. No phone publicly published in Phase 1.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">05</span>Confidentiality Note</div><div class="si-desc">Plain line on how enquiries are handled and stored. References the privacy policy.<span class="si-note seo">Legal review</span></div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="conn">&darr;</div>
+
+<!-- LEGAL -->
+<div class="sg">
+  <div class="sg-label"><span class="sg-dot" style="background:#475569"></span><span class="sg-name" style="color:#475569">Legal &amp; Utility</span><span class="sg-line"></span></div>
+  <div class="pc t-slate">
+    <div class="pc-head">
+      <div class="pc-head-l">
+        <div class="pc-badges"><span class="badge-type">Legal / Utility</span></div>
+        <div class="pc-title">Legal &amp; Utility Pages</div>
+        <span class="pc-url">/privacy &nbsp;·&nbsp; /terms &nbsp;·&nbsp; /cookies &nbsp;·&nbsp; /404</span>
+        <div class="pc-desc">Standard legal and utility pages, drafted to cover the three jurisdictions where Cotswold Capital operates. Mark&rsquo;s legal counsel to sign off final wording. The 404 page is branded to maintain the calm visual standard rather than ship as a HubSpot default.</div>
+      </div>
+      <div class="pc-meta">
+        <span class="meta-pill">4 pages</span>
+      </div>
+    </div>
+    <div class="sg-grid">
+      <div class="si"><div class="si-title"><span class="si-icon">PR</span>Privacy Policy</div><div class="si-desc">UK GDPR plus UAE PDPL plus US state coverage. References HubSpot as the data processor for enquiries. Drafted by NEXA, signed off by Cotswold Capital&rsquo;s counsel.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">TC</span>Terms &amp; Conditions</div><div class="si-desc">Website terms covering use, content ownership and limitation of liability. Includes regulatory disclaimer that nothing on the site constitutes investment advice.<span class="si-note seo">Legal sign-off</span></div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">CK</span>Cookie Policy</div><div class="si-desc">Cookie classifications and HubSpot consent integration. Banner appears once per session with reject and accept options.</div></div>
+      <div class="si"><div class="si-title"><span class="si-icon">404</span>404 Page</div><div class="si-desc">Branded error page. Single line in the firm&rsquo;s voice, primary navigation, link to Contact. No clever message.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-card">
+  <h3>Global Footer</h3>
+  <div class="footer-grid">
+    <div class="fi"><strong>Identity</strong><span>Cotswold Capital logo &middot; one-line tagline &middot; firm registration line.</span></div>
+    <div class="fi"><strong>Navigation</strong><span>Home &middot; About &middot; What We Do &middot; Opportunities &middot; Experience &middot; Team &middot; Contact.</span></div>
+    <div class="fi"><strong>UK Office</strong><span>Address &middot; jurisdiction &middot; dedicated enquiry email.</span></div>
+    <div class="fi"><strong>UAE Office</strong><span>Address &middot; jurisdiction &middot; dedicated enquiry email.</span></div>
+    <div class="fi"><strong>US Office</strong><span>New York address &middot; jurisdiction &middot; dedicated enquiry email.</span></div>
+    <div class="fi"><strong>Connect</strong><span>LinkedIn (firm) &middot; HubSpot newsletter opt-in (optional Phase 1).</span></div>
+    <div class="fi"><strong>Legal</strong><span>Privacy &middot; Terms &middot; Cookies &middot; Regulatory disclaimer (per jurisdiction).</span></div>
+    <div class="fi"><strong>Compliance</strong><span>Multi-entity disclosure: three legal entities, one brand. Each entity governed by local rules.</span></div>
+    <div class="fi"><strong>Copyright</strong><span>&copy; Cotswold Capital. All rights reserved. &middot; Built with HubSpot.</span></div>
+  </div>
+</div>
+
+<!-- DEV NOTES -->
+<div class="devnotes">
+  <div class="devnotes-title">Developer &amp; Build Notes</div>
+  <div class="devnotes-grid">
+    <div class="dn"><strong>Platform &middot; HubSpot Content Hub (Starter)</strong>Registered by Mark Hardwicke on the dedicated Cotswold Capital email. NEXA to receive partner seat access. Content Hub Starter supports up to thirty landing pages, which comfortably covers Phase 1.</div>
+    <div class="dn"><strong>Theme base &middot; Human Magic</strong>Build sits on the Human Magic theme (NEXA-owned) restyled for Cotswold Capital. Logo replaced, palette swapped to white background with rose-gold accent and a hint of conservative blue. Structure carries over; visual language does not.</div>
+    <div class="dn"><strong>Brand &middot; pending colour codes</strong>Mark to share the exact rose-gold hue and the conservative blue hue codes. Until received, design draft uses a holding rose-gold and a deep navy as proxies. Hold final design pass until codes are confirmed.</div>
+    <div class="dn"><strong>Design direction</strong>Apple-style minimalism. White backgrounds throughout. No dark mode sections. No 3D objects. No illustrated graphics. Preserve and refine the existing Cotswold Capital logo mark; do not redraw it.</div>
+    <div class="dn"><strong>Content &middot; written by client</strong>Mark Hardwicke is writing all copy. NEXA to advise on phrasing for multi-jurisdiction travel (UK, UAE, US) and LLM-legible structure for future Phase 2 work on LinkedIn outreach and OpenClaw integration.</div>
+    <div class="dn"><strong>Forms &middot; HubSpot routing</strong>All enquiry forms route into HubSpot with intent tags (investor, client, opportunity submission, advisor, press). Mark&rsquo;s dedicated Cotswold Capital email channel is the only correspondence channel from NEXA. No Human Magic email threads.</div>
+    <div class="dn"><strong>Multi-entity disclosure</strong>One website represents three legal entities (UK, UAE, New York). Footer and Contact must disclose all three. Regulatory disclaimers vary by jurisdiction; legal counsel to confirm final wording before launch.</div>
+    <div class="dn"><strong>Phase boundary</strong>Phase 1 is the website only. SEO, LLM citation optimisation, OpenClaw and LinkedIn outreach automation are Phase 2 and scoped separately. Maintenance is not currently in the contract; flag to Mark for Phase 2.</div>
+    <div class="dn"><strong>Editable in HubSpot by client</strong>Featured Opportunities (Home), Live Opportunities grid, individual Opportunity Detail pages, Transactions grid (Experience), Advisor Network roster (Team). Mark publishes and retires content directly.</div>
+    <div class="dn"><strong>Access &middot; outstanding</strong>HubSpot starter registration pending. Once provisioned, NEXA partner seat to be added. Mark&rsquo;s Cotswold Capital email to be issued to Mabina before kick-off.</div>
+  </div>
+</div>
+
+<div class="credit">
+  Prepared by <strong>NEXA</strong> &nbsp;&middot;&nbsp; mubeena@digitalnexa.com &nbsp;&middot;&nbsp; Sitemap v1 &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; For Cotswold Capital
+</div>
+
+</main>
+</body>
+</html>

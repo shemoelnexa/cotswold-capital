@@ -1,0 +1,13 @@
+{
+  "name": "cotswold-capital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cotswold Capital — design concepts and brand exploration (static site)",
+  "scripts": {
+    "dev": "browser-sync start --server --port 8080 --no-open --no-notify --files \"**/*.html\" \"**/*.css\" \"**/*.js\" --ignore \"node_modules/**\"",
+    "start": "browser-sync start --server --port 8080 --no-notify --files \"**/*.html\" \"**/*.css\" \"**/*.js\" --ignore \"node_modules/**\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.0"
+  }
+}

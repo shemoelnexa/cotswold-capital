@@ -6,30 +6,36 @@
    ============================================================ */
 
 :root {
+  /* ============================================================
+     CLIENT PALETTE ONLY — white #FFFFFF, navy #1C252E (the "blue"),
+     rose gold #CCB3A4 (logo + sparing accent). Dark sections use the
+     same navy; greys/lines are navy at reduced opacity. No other hues.
+     ============================================================ */
+
   /* ---- Surface ---- */
-  --surface:        #FFFFFF;   /* dominant white field            */
-  --surface-2:      #F7F4ED;   /* quiet warm section              */
-  --ink-surface:    #0A0A0A;   /* near-black (footer / billboard) */
+  --surface:        #FFFFFF;            /* dominant white field            */
+  --surface-2:      rgba(28,37,46,0.03); /* faint navy wash over white       */
+  --ink-surface:    #1C252E;            /* navy (footer / billboard)        */
 
   /* ---- Ink ---- */
-  --ink:            #0A0A0A;   /* primary display + body          */
-  --ink-2:          #3A3631;   /* secondary copy                  */
-  --ink-3:          #6E685E;   /* tertiary / meta                 */
-  --ink-inv:        #FFFFFF;   /* on dark                         */
+  --ink:            #1C252E;            /* navy — primary display + body    */
+  --ink-2:          rgba(28,37,46,0.72);/* secondary copy                  */
+  --ink-3:          rgba(28,37,46,0.55);/* tertiary / meta                 */
+  --ink-inv:        #FFFFFF;            /* on dark                          */
   --ink-inv-2:      rgba(255,255,255,0.80);
   --ink-inv-3:      rgba(255,255,255,0.50);
 
   /* ---- Lines ---- */
-  --rule:           #E5DFD0;
+  --rule:           rgba(28,37,46,0.12);
   --rule-ink:       rgba(255,255,255,0.14);
-  --rule-rose:      rgba(156,102,70,0.28);
+  --rule-rose:      rgba(204,179,164,0.32);
 
-  /* ---- Accent (Cotswold rose-gold + conservative blue) ---- */
-  --rose:           #9C6646;
-  --rose-2:         #8A5538;
-  --rose-soft:      #E3D1B3;   /* warm tint used on dark borders  */
-  --blue:           #1F2D4A;
-  --blue-bright:    #2B4D7F;
+  /* ---- Accent (rose gold + navy "blue") ---- */
+  --rose:           #CCB3A4;
+  --rose-2:         #BFA292;            /* same hue, slightly deeper for hover */
+  --rose-soft:      rgba(204,179,164,0.45); /* rose tint on dark borders   */
+  --blue:           #1C252E;            /* navy is the only blue            */
+  --blue-bright:    #2E3D4C;            /* lighter navy, same hue           */
 
   /* ---- Type ----
      Exact Figma faces named first (Founders Grotesk / …Condensed,
@@ -40,7 +46,7 @@
 
   /* fluid sizes scaled from the 1920px Figma frame */
   --t-hero:         clamp(3.25rem, 8.6vw, 10.5rem);  /* hero display (fits longer phrase w/ margins) */
-  --t-hero-sub:     clamp(1.25rem, 2vw, 2.375rem);  /* hero subhead 38px    */
+  --t-hero-sub:     clamp(1.0625rem, 1.5vw, 1.375rem); /* hero lede ~17–22px */
   --t-capabilities: clamp(4rem, 12vw, 14.4rem);     /* image-fill 231px     */
   --t-service:      clamp(2.25rem, 4.2vw, 5rem);    /* service names 80px   */
   --t-service-lede: clamp(1.5rem, 2vw, 2.375rem);   /* right lede 38px      */

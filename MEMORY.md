@@ -15,3 +15,4 @@ All project memory lives inside this folder. Do not write project memory to `~/.
 - [Scope & Timeline](memory/scope-timeline.md) — phase one scope, out-of-scope items, no hard deadline
 - [Team & Stakeholders](memory/team.md) — Mark, Jatin, Mubeena, Shemoel
 - [Designer Deliverables](memory/designer-deliverables.md) — moodboard, type directions, palette, Home + Opportunities wireframes
+- [Concept IV Checkpoint](memory/concept-iv-checkpoint.md) — bold full-bleed home page (built, on main); hero copy + logo wall still placeholder
