@@ -224,7 +224,13 @@
   color: var(--ink-3);
 }
 
-.hero__eyebrow .dot { display: none; }
+.hero__eyebrow .dot {
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  border-radius: 1px;
+  background: var(--rose);
+}
 
 .hero__headline {
   font-family: var(--font-display);
@@ -290,6 +296,16 @@
   letter-spacing: var(--ls-eyebrow);
   text-transform: uppercase;
   color: var(--ink-3);
+}
+
+.s-head__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background: var(--rose);
 }
 
 .s-head__title {
@@ -815,6 +831,16 @@
   text-transform: uppercase;
   color: var(--ink-3);
   margin-bottom: var(--s-5);
+}
+
+.page-head__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background: var(--rose);
 }
 
 .page-head__title {
@@ -1814,15 +1840,23 @@ a.inline-link:hover { background-size: 100% 1px; }
 /* ---- Opportunities section (light, warm cream surface) ---- */
 
 .section--dark {
-  background: var(--surface-2);
-  color: var(--ink);
+  background: var(--ink-dark);          /* navy #1B252E band */
+  color: var(--on-dark);
   position: relative;
   overflow: hidden;
 }
 
-.section--dark .s-head__eyebrow { color: var(--ink-3); }
-.section--dark .s-head__title { color: var(--ink); }
-.section--dark .s-head__sub { color: var(--ink-2); }
+.section--dark .s-head__eyebrow { color: var(--on-dark-3); }
+.section--dark .s-head__title { color: var(--rose); }   /* rose-gold heading — legible on navy */
+.section--dark .s-head__sub { color: var(--on-dark-2); }
+.section--dark .cine-feature__meta { color: var(--on-dark-3); }
+.section--dark .cine-feature__title { color: var(--on-dark); }
+.section--dark .cine-feature__desc { color: var(--on-dark-2); }
+.section--dark .cine-feature__figure { color: var(--on-dark); }
+.section--dark .cine-feature__figure-unit { color: var(--on-dark-3); }
+.section--dark .cine-feature__cta { color: var(--on-dark); border-bottom-color: var(--rule-dark); }
+.section--dark .btn--ghost { color: var(--on-dark); border-color: var(--rule-dark); }
+.section--dark .btn--ghost:hover { background: rgba(255,255,255,0.06); border-color: var(--rose); color: var(--on-dark); }
 
 /* Curtain transition on entry — only when JS is active */
 .section--dark::before {

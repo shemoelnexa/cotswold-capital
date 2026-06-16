@@ -5,29 +5,30 @@
 
 :root {
   /* ============================================================
-     CLIENT PALETTE ONLY — white #FFFFFF, navy #1C252E (the "blue"),
-     rose gold #CCB3A4 (logo + sparing accent). Secondary text and
-     lines are navy at reduced opacity; no other hues are used.
+     CLIENT PALETTE — white #FFFFFF (page base), rose gold #CCB3A4
+     (the LEADING colour: rules, washes, accents ≈ 60%), navy
+     #1B252E (the anchor: primary text, solid buttons, dark
+     sections ≈ 40%). No other hues are used.
      ============================================================ */
 
   /* ---- Surface ---- */
   --surface:        #FFFFFF;
-  --surface-2:      rgba(28,37,46,0.03); /* faint navy wash over white */
-  --surface-3:      rgba(28,37,46,0.06);
+  --surface-2:      rgba(204,179,164,0.07); /* faint rose-gold wash over white */
+  --surface-3:      rgba(204,179,164,0.13);
 
   /* ---- Ink ---- */
-  --ink:            #1C252E;            /* navy — primary text */
-  --ink-2:          rgba(28,37,46,0.72);
-  --ink-3:          rgba(28,37,46,0.55);
+  --ink:            #1B252E;            /* navy — primary text */
+  --ink-2:          rgba(27,37,46,0.72);
+  --ink-3:          rgba(27,37,46,0.55);
   --ink-inv:        #FFFFFF;
 
-  /* ---- Lines ---- */
-  --rule:           rgba(28,37,46,0.12);
-  --rule-strong:    rgba(28,37,46,0.24);
+  /* ---- Lines (rose-gold tinted — the dividers carry the warmth) ---- */
+  --rule:           rgba(204,179,164,0.45);
+  --rule-strong:    rgba(204,179,164,0.70);
 
-  /* ---- Accents (used sparingly) ---- */
-  --rose:           #CCB3A4;            /* rose gold */
-  --blue:           #1C252E;            /* navy is the only blue */
+  /* ---- Accents ---- */
+  --rose:           #CCB3A4;            /* rose gold — leading accent */
+  --blue:           #1B252E;            /* navy is the only blue */
 
   /* ---- Type ---- */
   --font-display:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -82,18 +83,18 @@
   --r-2:            6px;
 
   /* ---- Shadows (whisper only) ---- */
-  --shadow-1:       0 1px 2px rgba(28,37,46,0.04),
-                    0 2px 8px rgba(28,37,46,0.04);
-  --shadow-2:       0 8px 30px rgba(28,37,46,0.10),
-                    0 2px 6px rgba(28,37,46,0.06);
+  --shadow-1:       0 1px 2px rgba(27,37,46,0.04),
+                    0 2px 8px rgba(27,37,46,0.04);
+  --shadow-2:       0 8px 30px rgba(27,37,46,0.10),
+                    0 2px 6px rgba(27,37,46,0.06);
 
   /* ---- Cursor ---- */
   --cursor-dot:     6px;
   --cursor-ring:    34px;
 
   /* ---- Dark surface (navy) ---- */
-  --ink-dark:       #1C252E;            /* navy */
-  --ink-dark-2:     #283039;            /* lighter navy, same hue, for layering */
+  --ink-dark:       #1B252E;            /* navy */
+  --ink-dark-2:     #27313A;            /* lighter navy, same hue, for layering */
   --on-dark:        #FFFFFF;
   --on-dark-2:      rgba(255,255,255,0.74);
   --on-dark-3:      rgba(255,255,255,0.52);
