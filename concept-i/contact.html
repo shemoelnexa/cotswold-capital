@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FBF9F6" />
+  <title>Contact — Cotswolds Capital</title>
+  <meta name="description" content="Engagements begin with a private introduction. Initial enquiries are reviewed directly by the principals. Discretion and confidentiality extend to all correspondence received." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/site.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/logo/cotswold-mark.svg" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .reveal-stagger, .clip-reveal, .curtain, .section--dark').forEach((el) => {
+        if (!el.classList.contains('is-in')) el.classList.add('is-in');
+      });
+    }, 2500);
+    document.addEventListener('error', (e) => {
+      const t = e.target;
+      if (t && t.tagName === 'IMG') {
+        t.style.opacity = '0';
+        const parent = t.parentElement;
+        if (parent) parent.style.background = 'linear-gradient(135deg, oklch(0.94 0.010 50), oklch(0.88 0.014 45))';
+      }
+    }, true);
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress__bar"></span>
+  </div>
+
+  <header class="nav" data-scrolled="false">
+    <div class="nav__meta">
+      <div class="container nav__meta-inner">
+        <div class="nav__meta-cities">
+          <span>London</span><span>New York</span><span>Dubai</span>
+        </div>
+        <span class="nav__meta-tag">The strategic advisory firm</span>
+      </div>
+    </div>
+    <div class="container nav__inner">
+      <a class="nav__brand" href="./index.html" aria-label="Cotswolds Capital home">
+        <img class="brand-logo" src="./assets/logo/cotswold-logo.avif" alt="Cotswolds Capital" />
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="./index.html">Home</a></li>
+          <li><a class="nav__link" href="./about.html">About</a></li>
+          <li><a class="nav__link" href="./expertise.html">Expertise</a></li>
+          <li><a class="nav__link" href="./situations.html">Situations</a></li>
+          <li><a class="nav__link" href="./insights.html">Insights</a></li>
+          <li><a class="nav__link" aria-current="page" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="nav__cta" href="./contact.html">Begin a conversation</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head" data-hero>
+      <div class="container">
+        <p class="page-head__eyebrow">Contact</p>
+        <h1 class="page-head__title">
+          <span class="word"><span class="word-inner">Begin</span></span>
+          <span class="word"><span class="word-inner">with</span></span>
+          <span class="word"><span class="word-inner">a</span></span>
+          <span class="word"><span class="word-inner">private</span></span>
+          <span class="word"><span class="word-inner">introduction.</span></span>
+        </h1>
+        <p class="page-head__lede">
+          Cotswolds Capital operates across a limited number of selected engagements at any given time. Most originate through established relationships or trusted intermediary networks, where context already exists and the basis for engagement is understood by both parties before any formal conversation begins.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight" data-meta>
+      <span class="section-meta" aria-hidden="true">Enquiries</span>
+      <div class="container">
+        <div class="contact">
+          <div class="contact__intents reveal">
+            <div class="prose" style="margin-bottom: var(--s-6);">
+              <p>Where a matter is appropriate and the timing is right, the firm will engage. Initial enquiries are reviewed directly by the principals. Where engagement is considered appropriate, a response will follow in the normal course.</p>
+            </div>
+            <p class="s-head__eyebrow" style="margin-bottom: var(--s-3);">Making an enquiry</p>
+            <p style="color:var(--ink-2); font-size:1rem; line-height:1.62; max-width:46ch;">
+              The firm responds to enquiries that describe a specific situation — not a general interest in advisory services. The more clearly the nature of the matter is set out, the more usefully the firm can assess whether it is one it is positioned to assist with. Discretion and confidentiality are fundamental to the firm's operating approach and extend to all correspondence received, whether or not engagement follows.
+            </p>
+          </div>
+
+          <form class="form reveal" onsubmit="event.preventDefault(); alert('This is a design concept. Form is not wired.');">
+            <div class="form__row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="org">Organisation</label>
+                <input id="org" name="org" type="text" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="jurisdiction">Jurisdiction</label>
+                <select id="jurisdiction" name="jurisdiction">
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>United Arab Emirates</option>
+                  <option>Switzerland</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">The nature of the matter</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div>
+              <button class="btn" type="submit">
+                Send privately
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"><path d="M5 12 H19"/><path d="M13 6 L19 12 L13 18"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" data-meta>
+      <span class="section-meta" aria-hidden="true">Locations</span>
+      <div class="container">
+        <header class="s-head reveal">
+          <p class="s-head__eyebrow">Locations</p>
+        </header>
+        <div class="locations reveal-stagger">
+          <span class="location__name">London</span>
+          <span class="location__name">New York</span>
+          <span class="location__name">Dubai</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pull-quote">
+      <div class="container">
+        <p class="pull-quote__text reveal">
+          "Discretion as a deliverable."
+        </p>
+        <p class="pull-quote__attr reveal">— Cotswolds Capital</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="brand-logo" src="./assets/logo/cotswold-logo.avif" alt="Cotswolds Capital" />
+          <p class="footer__tag">A discreet strategic advisory office. Counsel on complex situations, capital, and high-consequence matters — by referral, under one institutional name.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Firm</h4>
+          <ul role="list">
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./expertise.html">Expertise</a></li>
+            <li><a href="./situations.html">Situations</a></li>
+            <li><a href="./insights.html">Insights</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Offices</h4>
+          <ul role="list">
+            <li>Mayfair · London</li>
+            <li>Midtown · New York</li>
+            <li>DIFC · Dubai</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="#">Privacy &amp; legal</a></li>
+            <li><a href="#">Modern slavery statement</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© Cotswolds Capital · 2026</span>
+        <span>Discretion as a deliverable</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/animations.js" defer></script>
+  <script src="./scripts/interactions.js" defer></script>
+
+</body>
+</html>

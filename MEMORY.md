@@ -16,3 +16,5 @@ All project memory lives inside this folder. Do not write project memory to `~/.
 - [Team & Stakeholders](memory/team.md) — Mark, Jatin, Mubeena, Shemoel
 - [Designer Deliverables](memory/designer-deliverables.md) — moodboard, type directions, palette, Home + Opportunities wireframes
 - [Concept IV Checkpoint](memory/concept-iv-checkpoint.md) — bold full-bleed home page (built, on main); hero copy + logo wall still placeholder
+- [Switcher Checkpoint](memory/switcher-checkpoint.md) — index.html shows only Concept I & IV (IV relabelled "Concept II"); II & III folders hidden, not deleted
+- [Concept I Approved + v2 Copy](memory/concept-i-approved-v2-copy.md) — Concept I is final; full 6-page v2 copy applied; brand renamed to "Cotswolds Capital" (logo asset still needs re-lettering)
